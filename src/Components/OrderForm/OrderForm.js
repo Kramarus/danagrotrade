@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './OrderForm.css';
-
 export default class OrderForm extends React.Component {
     render(){
         return(

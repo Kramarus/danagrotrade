@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "./Hero.css";
-
 import shipped from "./img/shipped.png";
 import packaging from "./img/package.png";
 import twenty from "./img/twenty.png";
@@ -42,7 +40,7 @@ class Hero extends React.Component {
             <img src={e.src} alt={e.alt} />
           </div>
           <div className="hero-feature-content">
-            <p>{e.desc[this.props.lang]}</p>
+            {e.desc[this.props.lang]}
           </div>
         </div>
       );
@@ -51,11 +49,11 @@ class Hero extends React.Component {
     return (
       <section className="hero container">
         <div className="hero-content">
-          <h1>{content.heroTitle[this.props.lang]}</h1>
-          <p>{content.heroSubtitle[this.props.lang]}</p>
+          {content.heroTitle[this.props.lang]}
+          {content.heroSubtitle[this.props.lang]}
           <div className="cta-group">
-            <a className="cta-primary">{content.ctaPrimary[this.props.lang]}</a>
-            <a className="cta-secondary">
+            <a className="cta cta-primary">{content.ctaPrimary[this.props.lang]}</a>
+            <a className="cta cta-secondary">
               {content.ctaSecondary[this.props.lang]}
             </a>
           </div>

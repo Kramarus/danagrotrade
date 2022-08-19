@@ -1,5 +1,4 @@
 import React from "react";
-import "./Products.css";
 
 import content from "../../content";
 
@@ -34,7 +33,7 @@ export default class Products extends React.Component {
     });
 
     return (
-      <section className="bg-yellow">
+      <section className="production filled">
         <div className="container">
           <h2 className="section-title">
             <span>{content.productsTitle[this.props.lang][1]}</span> {content.productsTitle[this.props.lang][2]}
