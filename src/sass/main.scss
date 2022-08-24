@@ -1,8 +1,11 @@
-// Color scheme
-$primary-color: #f8bf01;
-$secondary-color: #62a901;
-$light-color: #f2f2f2;
-$dark-color: black;
+@import "./helpers/variables";
+@import "./layout/responsive";
+@import "./design/typography";
+@import "./components/modalOrderForm";
+
+html {
+  scroll-behavior: smooth;
+}
 
 .bg-yellow {
   background-color: $primary-color;
@@ -12,28 +15,8 @@ $dark-color: black;
   color: $secondary-color;
 }
 
-//Typography
-body {
-  font-family: sans-serif;
-}
 
-h1 {
-  font-size: 48px;
-}
 
-h2 {
-  font-size: 36px;
-  margin: 8px 0;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-p {
-  font-size: 24px;
-  margin: 16px 0;
-}
 
 // Technical
 .border {
@@ -74,30 +57,32 @@ footer {
       color: $secondary-color;
     }
   }
-  a.cta {
-    padding: 16px 32px;
-    border-radius: 10px;
-    font-size: 24px;
+}
+
+a.cta {
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-size: 24px;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+  }
+  &.cta-primary {
+    background-color: $primary-color;
+    color: $dark-color;
     &:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-      transition: transform 0.5s;
-    }
-    &.cta-primary {
-      background-color: $primary-color;
-      color: $dark-color;
-      &:hover {
-        background-color: $secondary-color;
-        color: $light-color;
-      }
-    }
-    &.cta-secondary {
+      background-color: $secondary-color;
       color: $light-color;
-      border: 2px solid $light-color;
-      &:hover {
-        background-color: $light-color;
-        color: $dark-color;
-      }
+    }
+  }
+  &.cta-secondary {
+    color: $light-color;
+    border: 2px solid $light-color;
+    &:hover {
+      background-color: $light-color;
+      color: $dark-color;
     }
   }
 }

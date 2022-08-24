@@ -33,7 +33,7 @@ export default class Products extends React.Component {
     });
 
     return (
-      <section className="production filled">
+      <section className="production filled" id="our-production">
         <div className="container">
           <h2 className="section-title">
             <span>{content.productsTitle[this.props.lang][1]}</span> {content.productsTitle[this.props.lang][2]}

@@ -1,9 +1,62 @@
-.bg-yellow {
-  background-color: #f8bf01; }
-
-.text-green {
-  color: #62a901; }
-
+@media screen and (max-width: 1327px) {
+  .navbar {
+    margin: auto 16px; } }
+@media screen and (max-width: 815px) {
+  .navbar .cta-navbar {
+    display: none; } }
+@media screen and (max-width: 624px) {
+  .navbar .logo-container {
+    flex: 2; }
+  .navbar .logo-descriptor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 10; }
+    .navbar .logo-descriptor h2 {
+      font-size: 24px; }
+    .navbar .logo-descriptor p {
+      font-size: 16px; }
+  .navbar .lang-selector {
+    flex: 2; } }
+@media screen and (max-width: 1327px) {
+  .hero {
+    margin: 32px 16px; }
+    .hero .hero-content {
+      width: 1327px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 64px 0;
+      align-items: center; }
+      .hero .hero-content h1 {
+        font-size: 36px; }
+      .hero .hero-content p {
+        font-size: 24px; }
+    .hero .hero-features {
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 16px 0; }
+      .hero .hero-features .hero-feature {
+        margin: 8px 0;
+        justify-content: center; }
+        .hero .hero-features .hero-feature .hero-feature-content p {
+          font-size: 16px;
+          width: auto; }
+        .hero .hero-features .hero-feature .hero-feature-img {
+          width: 4vw; } }
+@media screen and (max-width: 738px) {
+  .hero .hero-features {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .hero .hero-features .hero-feature-img {
+      width: 10vw; }
+    .hero .hero-features .hero-feature-content p {
+      width: 240px; } }
 body {
   font-family: sans-serif; }
 
@@ -20,6 +73,105 @@ h3 {
 p {
   font-size: 24px;
   margin: 16px 0; }
+
+.modalOverlay .modalOrderForm form .form-buttons-row .cta-form-submit, .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-close {
+  padding: 16px 32px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 8px; }
+  .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-submit:hover, .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-close:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s; }
+
+.modalOverlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000; }
+  .modalOverlay .modalOrderForm {
+    box-sizing: border-box;
+    max-width: 480px;
+    background-color: #f8bf01;
+    z-index: 1500;
+    opacity: 1;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    color: black; }
+    .modalOverlay .modalOrderForm .modal-header {
+      border-bottom: 1px solid #62a901;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .modalOverlay .modalOrderForm .modal-header h2 {
+        align-self: flex-end;
+        line-height: 32px; }
+      .modalOverlay .modalOrderForm .modal-header a {
+        cursor: pointer;
+        font-size: 48px;
+        padding: 8px;
+        color: #f2f2f2;
+        transform: rotate(45deg);
+        align-self: center; }
+        .modalOverlay .modalOrderForm .modal-header a:hover {
+          color: black;
+          transform: scale(1.1);
+          transition: transform 0.5s;
+          transform: rotate(45deg); }
+    .modalOverlay .modalOrderForm form {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch; }
+      .modalOverlay .modalOrderForm form .form-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        .modalOverlay .modalOrderForm form .form-row .form-product {
+          margin-right: 16px; }
+        .modalOverlay .modalOrderForm form .form-row .form-volume {
+          width: 120px; }
+      .modalOverlay .modalOrderForm form .form-query {
+        padding: 8px 0;
+        display: flex;
+        flex-direction: column; }
+        .modalOverlay .modalOrderForm form .form-query .text-input,
+        .modalOverlay .modalOrderForm form .form-query select {
+          font-size: 16px;
+          border: 1px dotted #f2f2f2;
+          border-radius: 8px;
+          padding: 8px; }
+        .modalOverlay .modalOrderForm form .form-query select {
+          min-width: 240px; }
+      .modalOverlay .modalOrderForm form .form-label {
+        font-size: 16px;
+        padding: 8px 0; }
+      .modalOverlay .modalOrderForm form .form-buttons-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 16px 0; }
+        .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-submit {
+          background-color: #62a901;
+          color: #f2f2f2;
+          box-shadow: none;
+          border: none; }
+        .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-close {
+          border: 2px solid #f2f2f2;
+          color: #f2f2f2; }
+
+html {
+  scroll-behavior: smooth; }
+
+.bg-yellow {
+  background-color: #f8bf01; }
+
+.text-green {
+  color: #62a901; }
 
 .border {
   border: 1px solid #f2f2f2; }
@@ -52,32 +204,28 @@ footer {
     section h2.section-title span,
     footer h2.section-title span {
       color: #62a901; }
-  section a.cta,
-  footer a.cta {
-    padding: 16px 32px;
-    border-radius: 10px;
-    font-size: 24px; }
-    section a.cta:hover,
-    footer a.cta:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-      transition: transform 0.5s; }
-    section a.cta.cta-primary,
-    footer a.cta.cta-primary {
-      background-color: #f8bf01;
+
+a.cta {
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-size: 24px;
+  text-decoration: none; }
+  a.cta:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.5s; }
+  a.cta.cta-primary {
+    background-color: #f8bf01;
+    color: black; }
+    a.cta.cta-primary:hover {
+      background-color: #62a901;
+      color: #f2f2f2; }
+  a.cta.cta-secondary {
+    color: #f2f2f2;
+    border: 2px solid #f2f2f2; }
+    a.cta.cta-secondary:hover {
+      background-color: #f2f2f2;
       color: black; }
-      section a.cta.cta-primary:hover,
-      footer a.cta.cta-primary:hover {
-        background-color: #62a901;
-        color: #f2f2f2; }
-    section a.cta.cta-secondary,
-    footer a.cta.cta-secondary {
-      color: #f2f2f2;
-      border: 2px solid #f2f2f2; }
-      section a.cta.cta-secondary:hover,
-      footer a.cta.cta-secondary:hover {
-        background-color: #f2f2f2;
-        color: black; }
 
 .background-image {
   color: #f2f2f2;
