@@ -107,10 +107,18 @@ p {
       border-bottom: 1px solid #62a901;
       display: flex;
       flex-direction: row;
-      justify-content: space-between; }
-      .modalOverlay .modalOrderForm .modal-header h2 {
-        align-self: flex-end;
-        line-height: 32px; }
+      justify-content: space-between;
+      align-items: center; }
+      .modalOverlay .modalOrderForm .modal-header .x-btn {
+        width: 24px;
+        height: 24px;
+        cursor: pointer; }
+        .modalOverlay .modalOrderForm .modal-header .x-btn svg {
+          height: 32px;
+          width: 100px; }
+          .modalOverlay .modalOrderForm .modal-header .x-btn svg:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s; }
       .modalOverlay .modalOrderForm .modal-header a {
         cursor: pointer;
         font-size: 48px;
@@ -164,6 +172,97 @@ p {
           border: 2px solid #f2f2f2;
           color: #f2f2f2; }
 
+.modalOverlay .modalOrderForm form .form-buttons-row .cta-form-submit, .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-close {
+  padding: 16px 32px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 8px; }
+  .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-submit:hover, .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-close:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s; }
+
+.modalOverlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000; }
+  .modalOverlay .modalProductInfo {
+    box-sizing: border-box;
+    max-width: 1200px;
+    background-color: #f8bf01;
+    z-index: 1500;
+    opacity: 1;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    color: black; }
+    .modalOverlay .modalProductInfo .modal-header {
+      border-bottom: 1px solid #62a901;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .modalOverlay .modalProductInfo .modal-header .x-btn {
+        width: 24px;
+        height: 24px;
+        cursor: pointer; }
+        .modalOverlay .modalProductInfo .modal-header .x-btn svg {
+          height: 32px;
+          width: 100px; }
+          .modalOverlay .modalProductInfo .modal-header .x-btn svg:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s; }
+    .modalOverlay .modalProductInfo .modal-body {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 16px; }
+      .modalOverlay .modalProductInfo .modal-body .short-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1; }
+        .modalOverlay .modalProductInfo .modal-body .short-info .product-img {
+          width: 400px;
+          height: 268px;
+          border-radius: 15px; }
+          .modalOverlay .modalProductInfo .modal-body .short-info .product-img:hover {
+            overflow: hidden; }
+          .modalOverlay .modalProductInfo .modal-body .short-info .product-img img {
+            height: 100%;
+            width: 100%;
+            border-radius: 15px; }
+            .modalOverlay .modalProductInfo .modal-body .short-info .product-img img:hover {
+              -webkit-transform: scale(1.1);
+              -moz-transform: scale(1.1);
+              -o-transform: scale(1.1);
+              -ms-transform: scale(1.1);
+              transform: scale(1.1);
+              transition: transform 2s; }
+        .modalOverlay .modalProductInfo .modal-body .short-info .product-desc p {
+          font-size: 16px; }
+      .modalOverlay .modalProductInfo .modal-body .modal-table {
+        flex: 2;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        margin-left: 16px; }
+        .modalOverlay .modalProductInfo .modal-body .modal-table table {
+          width: 100%; }
+          .modalOverlay .modalProductInfo .modal-body .modal-table table th, .modalOverlay .modalProductInfo .modal-body .modal-table table td {
+            border: 1px solid #f2f2f2;
+            padding: 8px 16px; }
+    .modalOverlay .modalProductInfo .modal-footer {
+      display: flex;
+      flex-direction: row-reverse; }
+      .modalOverlay .modalProductInfo .modal-footer a {
+        color: #f2f2f2;
+        background-color: #62a901;
+        margin: 0; }
+
 html {
   scroll-behavior: smooth; }
 
@@ -180,7 +279,7 @@ html {
   border: 1px solid #f2f2f2; }
 
 .custom-height {
-  height: 540px; }
+  height: 600px; }
 
 .container {
   max-width: 1280px;
@@ -205,7 +304,34 @@ footer {
     footer h2.section-title span {
       color: #62a901; }
 
+.logo-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box; }
+  .logo-row .logo-container {
+    flex: 2;
+    height: 100px;
+    width: 100px;
+    transform: scale(1.1);
+    transition: transform 0.5s; }
+    .logo-row .logo-container img {
+      height: 100%;
+      cursor: pointer; }
+      .logo-row .logo-container img:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s; }
+  .logo-row .logo-descriptor {
+    flex: 7;
+    font-size: 16px;
+    color: #f2f2f2; }
+    .logo-row .logo-descriptor span {
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: bold; }
+
 a.cta {
+  margin: 16px 0;
   padding: 16px 32px;
   border-radius: 10px;
   font-size: 24px;
@@ -243,22 +369,6 @@ a.cta {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap; }
-    .background-image section.navbar .logo-container {
-      height: 100px;
-      width: 100px;
-      padding: 8px;
-      transform: scale(1.1);
-      transition: transform 0.5s; }
-      .background-image section.navbar .logo-container img {
-        height: 100%;
-        cursor: pointer; }
-    .background-image section.navbar .logo-descriptor {
-      font-size: 16px;
-      color: #f2f2f2; }
-      .background-image section.navbar .logo-descriptor span {
-        text-transform: uppercase;
-        font-size: 24px;
-        font-weight: bold; }
     .background-image section.navbar .lang-selector {
       margin: 8px 16px; }
       .background-image section.navbar .lang-selector select {
@@ -304,6 +414,9 @@ a.cta {
         align-items: center; }
         .background-image section.hero .hero-feature .hero-feature-img img {
           width: 100%; }
+          .background-image section.hero .hero-feature .hero-feature-img img:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s; }
       .background-image section.hero .hero-feature .hero-feature-content {
         width: auto;
         color: #f2f2f2;
@@ -346,7 +459,7 @@ a.cta {
         align-items: center; }
         .background-image section.production .products .product .product-content a.product-cta {
           color: black;
-          font-size: 16px;
+          font-size: 24px;
           padding: 8px 16px;
           border: 1px solid black;
           border-radius: 10px;
@@ -356,7 +469,6 @@ a.cta {
             color: #f2f2f2;
             background-color: #62a901;
             cursor: pointer;
-            font-size: 16px;
             border: 1px solid #62a901;
             transform: scale(1.1);
             transition: transform 0.5s; }
@@ -384,32 +496,25 @@ a.cta {
         color: #f2f2f2;
         text-align: start;
         font-size: 16px; }
-  .background-image footer .footer-logo {
+  .background-image footer .container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 32px; }
-    .background-image footer .footer-logo h2 {
-      text-transform: uppercase;
-      color: #f2f2f2; }
-  .background-image footer .footer-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; }
-    .background-image footer .footer-content .contacts {
-      flex: 1; }
-      .background-image footer .footer-content .contacts p {
+    flex-direction: row; }
+    .background-image footer .container .footer-logo {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 32px 0; }
+    .background-image footer .container .contacts {
+      flex: 2; }
+      .background-image footer .container .contacts p {
         color: #f2f2f2; }
-    .background-image footer .footer-content .newsletter {
+    .background-image footer .container .newsletter {
       flex: 1; }
-      .background-image footer .footer-content .newsletter .newsletter-box form {
+      .background-image footer .container .newsletter .newsletter-box form {
         display: flex;
         flex-direction: column;
         align-items: stretch; }
-    .background-image footer .footer-content h3 {
-      color: #f2f2f2;
-      text-align: center;
-      margin: 16px; }
 
 /*# sourceMappingURL=style.css.map */

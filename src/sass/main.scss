@@ -2,6 +2,7 @@
 @import "./layout/responsive";
 @import "./design/typography";
 @import "./components/modalOrderForm";
+@import "./components/modalProductInfo";
 
 html {
   scroll-behavior: smooth;
@@ -15,9 +16,6 @@ html {
   color: $secondary-color;
 }
 
-
-
-
 // Technical
 .border {
   border: 1px solid $light-color;
@@ -28,7 +26,7 @@ html {
 }
 
 .custom-height {
-  height: 540px;
+  height: 600px;
 }
 
 // Global
@@ -59,7 +57,40 @@ footer {
   }
 }
 
+.logo-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  .logo-container {
+    flex: 2;
+    height: 100px;
+    width: 100px;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    img {
+      height: 100%;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s;
+      }
+    }
+  }
+  .logo-descriptor {
+    flex: 7;
+    font-size: 16px;
+    color: $light-color;
+    span {
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
+
 a.cta {
+  margin: 16px 0;
   padding: 16px 32px;
   border-radius: 10px;
   font-size: 24px;
@@ -105,26 +136,6 @@ a.cta {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    .logo-container {
-      height: 100px;
-      width: 100px;
-      padding: 8px;
-      transform: scale(1.1);
-      transition: transform 0.5s;
-      img {
-        height: 100%;
-        cursor: pointer;
-      }
-    }
-    .logo-descriptor {
-      font-size: 16px;
-      color: $light-color;
-      span {
-        text-transform: uppercase;
-        font-size: 24px;
-        font-weight: bold;
-      }
-    }
     .lang-selector {
       margin: 8px 16px;
       select {
@@ -181,6 +192,10 @@ a.cta {
         align-items: center;
         img {
           width: 100%;
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s;
+          }
         }
       }
       .hero-feature-content {
@@ -235,7 +250,7 @@ a.cta {
           align-items: center;
           a.product-cta {
             color: black;
-            font-size: 16px;
+            font-size: 24px;
             padding: 8px 16px;
             border: 1px solid $dark-color;
             border-radius: 10px;
@@ -245,7 +260,6 @@ a.cta {
               color: $light-color;
               background-color: $secondary-color;
               cursor: pointer;
-              font-size: 16px;
               border: 1px solid $secondary-color;
               transform: scale(1.1);
               transition: transform 0.5s;
@@ -293,23 +307,19 @@ a.cta {
 
   /////////////////////////////////////////////////////////////////////////////////////////////// Footer
   footer {
-    .footer-logo {
+    .container {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      margin: 32px;
-      h2 {
-        text-transform: uppercase;
-        color: $light-color;
+      .footer-logo {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 32px 0;
       }
-    }
-    .footer-content {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
       .contacts {
-        flex: 1;
+        flex: 2;
         p {
           color: $light-color;
         }
@@ -323,12 +333,6 @@ a.cta {
             align-items: stretch;
           }
         }
-      }
-      //////////////////////////////////////////////////////////////////////////////////////////// Refactor!
-      h3 {
-        color: $light-color;
-        text-align: center;
-        margin: 16px;
       }
     }
   }

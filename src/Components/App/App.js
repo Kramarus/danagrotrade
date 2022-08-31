@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Navbar from "../Navbar/Navbar";
 import Hero from "../Hero/Hero";
@@ -7,38 +7,73 @@ import Advantages from "../Advantages/Advantages";
 import OurCompany from "../OurCompany/OurCompany";
 import Footer from "../Footer/Footer";
 import OrderForm from "../OrderForm/OrderForm";
+import ProductInfo from "../ProductInfo/ProductInfo";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { lang: "en", order: false }; /* en, de, ru,  */
+const content = {
+  en: {
+    descriptor: <><span>Dan Agro Trade</span><br />a wholesale supplier of food products in Europe</>,
+    ctaPrimary: <>Get a quote</>,
+    ctaSecondary: <>Learn more</>,
+  },
+  de: {
+    descriptor: <><span>Dan Agro Trade</span><br />Großhandelslieferant für Lebensmittelprodukte in Europa</>,
+    ctaPrimary: <>Preis anfragen</>,
+    ctaSecondary: <>Mehr erfahren</>,
+  },
+  ru: {
+    descriptor: <><span>Дан Агро Трейд</span><br />оптовый поставщик пищевых продуктов в Европе</>,
+    ctaPrimary: <>Узнать цену</>,
+    ctaSecondary: <>Подробнее</>,
+  },
+};
 
-    this.changeLang = this.changeLang.bind(this);
-  }
+export default function App() {
+  var [lang, setLang] = useState("en");
 
-  changeLang(e) {
-    this.setState({ lang: e.target.value });
-  }
+  const changeLang = (e) => {
+    setLang((lang = e.target.value));
+  };
 
-  render() {
-    return (
-      <div className="background-image">
-        <Navbar lang={this.state.lang} onchange={this.changeLang} />
-        {this.state.order ? (
-          <OrderForm />
-        ) : (
-          <div>
-            <Hero lang={this.state.lang} />
-            <Products lang={this.state.lang} />
-            <Advantages lang={this.state.lang} />
-            <OurCompany lang={this.state.lang} />
-          </div>
-        )}
+  var [formDisplay, setFormDisplay] = useState(false);
 
-        <Footer lang={this.state.lang} />
-      </div>
-    );
-  }
+  const openForm = () => {
+    setFormDisplay((formDisplay = true));
+  };
+
+  const closeForm = (e) => {
+    if (
+      e.tagret === document.getElementById("form-x-btn") ||
+      (e.target === document.getElementById("modalOverlay") &&
+        e.target !== document.getElementById("modalOrderForm"))
+    ) {
+      setFormDisplay((formDisplay = false));
+    }
+  };
+
+  const xCloseForm = () => {
+    setFormDisplay((formDisplay = false));
+  };
+
+
+
+  ///
+
+  return (
+    <div className="background-image">
+      {formDisplay ? (
+        <OrderForm lang={lang} closeForm={closeForm} xCloseForm={xCloseForm} />
+      ) : null}
+      <Navbar
+        lang={lang}
+        changeLang={changeLang}
+        openForm={openForm}
+        content={content}
+      />
+      <Hero lang={lang} openForm={openForm} content={content} />
+      <Products lang={lang} openForm={openForm} />
+      <Advantages lang={lang} />
+      <OurCompany lang={lang} />
+      <Footer lang={lang} openForm={openForm} content={content} />
+    </div>
+  );
 }
-
-export default App;
