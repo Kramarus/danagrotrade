@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/danagrotrade/static/css/main.afa4c273.css",
-    "main.js": "/danagrotrade/static/js/main.39f610aa.js",
+    "main.css": "/danagrotrade/static/css/main.e1490dde.css",
+    "main.js": "/danagrotrade/static/js/main.66f0cbff.js",
     "static/js/787.6388c6ef.chunk.js": "/danagrotrade/static/js/787.6388c6ef.chunk.js",
     "static/media/bg.jpg": "/danagrotrade/static/media/bg.221962df51af47b3758b.jpg",
     "static/media/twenty.png": "/danagrotrade/static/media/twenty.7bfbda64903a83a28fa5.png",
@@ -12,12 +12,12 @@
     "static/media/package.png": "/danagrotrade/static/media/package.37cbe4e0a005c5800c76.png",
     "static/media/logo.png": "/danagrotrade/static/media/logo.094006acbd4b447cad3c.png",
     "index.html": "/danagrotrade/index.html",
-    "main.afa4c273.css.map": "/danagrotrade/static/css/main.afa4c273.css.map",
-    "main.39f610aa.js.map": "/danagrotrade/static/js/main.39f610aa.js.map",
+    "main.e1490dde.css.map": "/danagrotrade/static/css/main.e1490dde.css.map",
+    "main.66f0cbff.js.map": "/danagrotrade/static/js/main.66f0cbff.js.map",
     "787.6388c6ef.chunk.js.map": "/danagrotrade/static/js/787.6388c6ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afa4c273.css",
-    "static/js/main.39f610aa.js"
+    "static/css/main.e1490dde.css",
+    "static/js/main.66f0cbff.js"
   ]
 }
