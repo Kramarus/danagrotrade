@@ -102,6 +102,14 @@ const content = {
 };
 
 export default function OrderForm(props) {
+  const validateForm = (e) => {
+    const nameField = document.getElementById("name");
+
+    if (nameField.value.includes("CryptoCep")) {
+      nameField.value = "";
+    }
+  };
+
   return (
     <div className="modalOverlay" id="modalOverlay" onClick={props.closeForm}>
       <div className="container modalOrderForm" id="modalOrderForm">
@@ -191,7 +199,11 @@ export default function OrderForm(props) {
                 {content[props.lang].product.label}
               </label>
 
-              <select className="form-select mb-3" id="product" name={content[props.lang].product.label}>
+              <select
+                className="form-select mb-3"
+                id="product"
+                name={content[props.lang].product.label}
+              >
                 <option selected>{content[props.lang].product.choose}</option>
                 <option value={content[props.lang].product.flour}>
                   {content[props.lang].product.flour}
@@ -267,7 +279,11 @@ export default function OrderForm(props) {
           </>
           {/* Buttons */}
           <div className="form-buttons-row">
-            <button type="submit" className="cta-form-submit">
+            <button
+              type="submit"
+              className="cta-form-submit"
+              onClick={validateForm}
+            >
               {content[props.lang].submit}
             </button>
           </div>

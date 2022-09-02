@@ -221,14 +221,27 @@ function Footer(props) {
           <div className="footer-links">
             <h3>{content[props.lang].links.title}</h3>
             <ul>
-              <li><a href="#home">{content[props.lang].links.home}</a></li>
-              <li><a href="#our-production">{content[props.lang].links.products}</a></li>
-              <li><a href="#advantages">{content[props.lang].links.advantages}</a></li>
-              <li><a href="#about">{content[props.lang].links.about}</a></li>
+              <li>
+                <a href="#home">{content[props.lang].links.home}</a>
+              </li>
+              <li>
+                <a href="#our-production">
+                  {content[props.lang].links.products}
+                </a>
+              </li>
+              <li>
+                <a href="#advantages">{content[props.lang].links.advantages}</a>
+              </li>
+              <li>
+                <a href="#about">{content[props.lang].links.about}</a>
+              </li>
             </ul>
           </div>
           <div className="newsletter">
-            <h3>{content[props.lang].newsletter.title}</h3>
+            <div className="newsletter-title">
+              <h3>{content[props.lang].newsletter.title}</h3>
+            </div>
+
             <form className="newsletter-box">
               <input
                 className="newsletter-text"
