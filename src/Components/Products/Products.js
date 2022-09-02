@@ -28,6 +28,16 @@ const content = {
     branLabel: <>Weizenkleie</>,
     semolinaLabel: <>Grieß</>,
   },
+  ua: {
+    productsTitle: (
+      <>
+        <span>Наші</span> продукти
+      </>
+    ),
+    flourLabel: <>Пшеничне борошно</>,
+    branLabel: <>Пшеничні висівки</>,
+    semolinaLabel: <>Манна крупа</>,
+  },
   ru: {
     productsTitle: (
       <>
@@ -93,6 +103,24 @@ export default function Products(props) {
       order: <>Mind. Bestellung</>,
       orderValue: <>ab 20 Tonnen</>,
       kg: <>kg</>,
+    },
+    ua: {
+      grade: <>Сорт</>,
+      highest: <>вищий</>,
+      first: <>перший</>,
+      color: <>Колір</>,
+      colorFlour: <>Білий або білий із жовтим відтінком</>,
+      colorBran: <>Червоно-жовтий із сируватим відтінком</>,
+      colorSemolina: <>Білий або з кремовим відтінком</>,
+      moisture: <>Вологість, %, не більше</>,
+      ash: <>Зольність у перерахунку на суху речовину, %, не менше</>,
+      gluten: <>Клейковина сира, %, не менше</>,
+      falling: <>Число падіння, %, не менше</>,
+      protein: <>Білок у перерахунку на суху речовину, %</>,
+      packaging: <>Фасування</>,
+      order: <>Мінімальне замовлення</>,
+      orderValue: <>від 20 тонн</>,
+      kg: <>кг</>,
     },
     ru: {
       grade: <>Сорт</>,
@@ -179,6 +207,11 @@ export default function Products(props) {
           standard: <>Weizenmehl laut dem Internationalen Technischen Standart (GOST) 46.004-99</>,
           origin: <>Herkunftsland: die Ukraine</>,
         },
+        ua: {
+          label: <>Пшеничне борошно</>,
+          standard: <>Борошно пшеничне відповідно до ГОСТ 46.004-99</>,
+          origin: <>Країна походження сировини: Україна</>,
+        },
         ru: {
           label: <>Пшеничная мука</>,
           standard: <>Пшеничная мука в соответствии с ГОСТ 46.004-99</>,
@@ -233,6 +266,11 @@ export default function Products(props) {
           standard: <>Weizenkleie laut dem Staatlichen Technischen Standart der Ukraine (DSTU) 3016-95</>,
           origin: <>Herkunftsland: die Ukraine</>,
         },
+        ua: {
+          label: <>Пшеничні висівки</>,
+          standard: <>Пшеничні висівки відповідно до ДСТУ 3016-95.</>,
+          origin: <>Країна походження сировини: Україна</>,
+        },
         ru: {
           label: <>Пшеничные отруби</>,
           standard: <>Пшеничные отруби в соответствии с ДСТУ 3016-95</>,
@@ -281,6 +319,11 @@ export default function Products(props) {
           standard: <>Grießlaut dem Internationalen Technischen Standart (GOST) 7022-97</>,
           origin: <>Herkunftsland: die Ukraine</>,
         },
+        ua: {
+          label: <>Манна крупа</>,
+          standard: <>Крупа манна відповідно до ГОСТ 7022-97</>,
+          origin: <>Країна походження сировини: Україна</>,
+        },
         ru: {
           label: <>Манная крупа</>,
           standard: <>Крупа манная в соответствии с ГОСТ 7022-97</>,
@@ -299,14 +342,14 @@ export default function Products(props) {
           <img src={e.src} alt={e.alt} />
         </div>
         <div className="product-content">
-          <a
+          <button
             className="product-cta"
             onClick={() => {
               setState({ productDisplay: true, productData: e });
             }}
           >
             {e.productInfo[props.lang].label}
-          </a>
+          </button>
         </div>
       </a>
     );
@@ -325,6 +368,7 @@ export default function Products(props) {
           xCloseProduct={xCloseProduct}
           productData={state.productData}
           openForm={props.openForm}
+          content={props.content}
         />
       ) : null}
     </section>

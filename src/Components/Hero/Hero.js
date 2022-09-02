@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import shipped from "./img/shipped.png";
 import packaging from "./img/package.png";
@@ -6,7 +6,7 @@ import twenty from "./img/twenty.png";
 
 const content = {
   en: {
-    heroTitle: <h1>Export of wheat flour in Europe with delivery</h1>,
+    heroTitle: <h1>Export of wheat flour with delivery all over Europe</h1>,
     heroSubtitle: <h2>All sorts and high quality standards directly from a Ukrainian manufacturer</h2>,
     features: {
       first: <p>Safe delivery from Slovakia <br />to any location in Europe</p>,
@@ -15,7 +15,7 @@ const content = {
     },
   },
   de: {
-    heroTitle: <h1>Export von Weizenmehl in Europa mit Lieferung</h1>,
+    heroTitle: <h1>Export von Weizenmehl mit Lieferung in ganz Europa</h1>,
     heroSubtitle: <h2>Alle Sorten und hohe Qualitätsstandards direkt vom ukrainischen Hersteller</h2>,
     features: {
       first: <p>Sichere Lieferung aus der Slowakei an jeden Ort in Europa</p>,
@@ -42,16 +42,16 @@ const content = {
     },
   },
   ua: {
-    heroTitle: "",
-    heroSubtitle: "",
+    heroTitle: <h1>Експорт пшеничного борошна з доставкою в Європі</h1>,
+    heroSubtitle: <h2>Усі види та високі стандарти якості безпосередньо від українського виробника</h2>,
     features: {
-      first: "",
-      second: "",
-      third: "",
+      first: <p>Надійна доставка зі Словаччини <br />в будь-яку точку Європи.</p>,
+      second: <p>Індивідуальна упаковка<br />з Вашою етикеткою</p>,
+      third: <p>Мінімальне замовлення: 20 тонн</p>,
     },
   },
   ru: {
-    heroTitle: <h1>Экспорт пшеничной муки по Европе с доставкой</h1>,
+    heroTitle: <h1>Экспорт пшеничной муки с доставкой по Европе</h1>,
     heroSubtitle: <h2>Все виды и высокие стандарты качества напрямую от украинского производителя</h2>,
     features: {
       first: <p>Надёжная доставка из  Словакии <br />в любую точку Европы</p>,
@@ -96,14 +96,14 @@ export default function Hero(props) {
 
   return (
     <>
-      <section className="hero container">
+      <section className="hero container" id="home">
         <div className="hero-content">
           {content[props.lang].heroTitle}
           {content[props.lang].heroSubtitle}
           <div className="cta-group">
-            <a className="cta cta-primary" onClick={props.openForm}>
+            <button className="cta cta-primary" onClick={props.openForm}>
               {props.content[props.lang].ctaPrimary}
-            </a>
+            </button>
             <a className="cta cta-secondary" href="#our-production">
               {props.content[props.lang].ctaSecondary}
             </a>

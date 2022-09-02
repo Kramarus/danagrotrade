@@ -44,8 +44,7 @@ section.filled {
   color: $dark-color;
 }
 
-section,
-footer {
+section {
   padding-bottom: 32px;
   h2.section-title {
     text-transform: uppercase;
@@ -81,6 +80,7 @@ footer {
     flex: 7;
     font-size: 16px;
     color: $light-color;
+    margin-left: 16px;
     span {
       text-transform: uppercase;
       font-size: 24px;
@@ -89,10 +89,11 @@ footer {
   }
 }
 
-a.cta {
+.cta {
   margin: 16px 0;
   padding: 16px 32px;
   border-radius: 10px;
+  border: none;
   font-size: 24px;
   text-decoration: none;
   &:hover {
@@ -110,6 +111,7 @@ a.cta {
   }
   &.cta-secondary {
     color: $light-color;
+    background-color: transparent;
     border: 2px solid $light-color;
     &:hover {
       background-color: $light-color;
@@ -199,7 +201,7 @@ a.cta {
         }
       }
       .hero-feature-content {
-        width: auto;
+        width: 320px;
         color: $light-color;
         margin: 10px 0;
         display: flex;
@@ -248,8 +250,9 @@ a.cta {
           flex-direction: row;
           justify-content: center;
           align-items: center;
-          a.product-cta {
+          .product-cta {
             color: black;
+            background-color: transparent;
             font-size: 24px;
             padding: 8px 16px;
             border: 1px solid $dark-color;
@@ -278,10 +281,9 @@ a.cta {
       flex-wrap: wrap;
       & > div {
         flex: 1;
-        height: 300px;
       }
       .advantage {
-        padding: 16px;
+        padding: 48px;
         .img-container {
           display: flex;
           flex-direction: column;
@@ -309,31 +311,94 @@ a.cta {
   footer {
     .container {
       display: flex;
-      flex-direction: row;
-      .footer-logo {
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin: 32px 0;
-      }
-      .contacts {
-        flex: 2;
-        p {
-          color: $light-color;
+      flex-direction: column;
+      .footer-grid {
+        margin: 32px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        & > div {
+          padding: 16px;
         }
-      }
-      .newsletter {
-        flex: 1;
-        .newsletter-box {
-          form {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
+        .footer-logo {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          a {
+            align-self: center;
+          }
+          .logo-row {
+            margin-bottom: 16px;
           }
         }
+        .footer-links {
+          flex: 1;
+          text-align: center;
+          ul {
+            padding: 0;
+            li {
+              list-style: none;
+              padding: 8px 0;
+              font-size: 24px;
+              a {
+                color: $light-color;
+              }
+            }
+          }
+        }
+        .newsletter {
+          flex: 1;
+          padding: 16px;
+          h3 {
+            text-align: center;
+          }
+          .newsletter-box {
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+            border: 2px solid $light-color;
+            padding: 8px;
+            border-radius: 10px;
+            .newsletter-text {
+              padding: 16px 24px;
+              font-size: 16px;
+              background-color: $light-color;
+              border: none;
+              border-bottom: 1px solid $dark-color;
+              border-radius: 10px;
+              margin: 8px 0;
+            }
+            .newsletter-btn {
+              padding: 8px 16px;
+              background-color: $light-color;
+              border: none;
+              border-radius: 10px;
+              font-size: 24px;
+              margin: 8px 0;
+              &:hover {
+                cursor: pointer;
+                border: 1px outset $light-color;
+                box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+                transform: translateY(-0.25em);
+                transition: transform 0.5s;
+              }
+            }
+          }
+        }
+        .contact-box {
+     
+        }
+      }
+      .copyright {
+        text-align: center;
+        padding: 32px 0;
       }
     }
   }
 }
+
+

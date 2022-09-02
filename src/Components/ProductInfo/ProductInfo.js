@@ -1,19 +1,5 @@
 import React from "react";
 
-const content = {
-  en: {
-    flour: {
-      productTitle: "Wheat flour",
-    },
-    bran: {
-      productTitle: "Wheat bran",
-    },
-    semolina: {
-      productTitle: "Semolina",
-    },
-  },
-};
-
 export default function ProductInfo(props) {
 
   const handleClick = () => {
@@ -66,7 +52,7 @@ export default function ProductInfo(props) {
           <div className="modal-table">{props.productData.table}</div>
         </div>
         <div className="modal-footer">
-          <a className="cta cta-primary" onClick={handleClick}>Order</a>
+          <a className="cta cta-primary" onClick={handleClick}>{props.content[props.lang].ctaPrimary}</a>
         </div>
       </div>
     </div>

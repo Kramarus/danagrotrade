@@ -49,7 +49,29 @@ const content = {
   },
   it: {},
   pl: {},
-  ua: {},
+  ua: {
+    title: "Форма замовлення",
+    name: "Ваше ім'я або назва компанії",
+    location: "Ваше місцезнаходження (країна, місто)",
+    email: "Ваш Email",
+    phone: "Ваш номер телефону",
+    product: {
+      label: "Продукт",
+      choose: "Оберіть продукт",
+      flour: "Пшеничне борошно",
+      bran: "Пшеничні висівки",
+      semolina: "Манна крупа",
+    },
+    volume: "Об'єм (тонн)",
+    customLabel: {
+      question: "Вам потрібна своя етикетка на продукті?",
+      no: "Ні",
+      yes: "Так",
+    },
+    comment: "Коментар (Ваші вимоги до рівня якості, упаковки тощо)",
+    submit: "Надіслати",
+    required: "* обов'язкові поля",
+  },
   ru: {
     title: "Форма заказа",
     name: "Ваше имя или название компании",
@@ -117,7 +139,7 @@ export default function OrderForm(props) {
             <input
               type="text"
               className="text-input"
-              name="Name (or company name)"
+              name={content[props.lang].name}
               id="name"
               required
             />
@@ -130,19 +152,19 @@ export default function OrderForm(props) {
             <input
               type="text"
               className="text-input"
-              name="Location"
+              name={content[props.lang].location}
               id="location"
               required
             />
           </div>
           <div className="form-query">
-            <label for="phoneNumber" className="form-label">
+            <label for="email" className="form-label">
               {content[props.lang].email}
             </label>
             <input
               type="text"
               className="text-input"
-              name="Email"
+              name={content[props.lang].email}
               id="email"
               required
             />
@@ -154,7 +176,7 @@ export default function OrderForm(props) {
             <input
               type="text"
               className="text-input"
-              name="Phone"
+              name={content[props.lang].phone}
               id="phoneNumber"
             />
           </div>
@@ -165,15 +187,15 @@ export default function OrderForm(props) {
                 {content[props.lang].product.label}
               </label>
 
-              <select className="form-select mb-3" id="product" name="Product">
+              <select className="form-select mb-3" id="product" name={content[props.lang].product.label}>
                 <option selected>{content[props.lang].product.choose}</option>
-                <option value="Wheat flour">
+                <option value={content[props.lang].product.flour}>
                   {content[props.lang].product.flour}
                 </option>
-                <option value="Wheat bran">
+                <option value={content[props.lang].product.bran}>
                   {content[props.lang].product.bran}
                 </option>
-                <option value="Semolina">
+                <option value={content[props.lang].product.semolina}>
                   {content[props.lang].product.semolina}
                 </option>
               </select>
@@ -185,7 +207,7 @@ export default function OrderForm(props) {
               <input
                 type="text"
                 className="text-input"
-                name="Volume (ton)"
+                name={content[props.lang].volume}
                 id="volume"
                 required
               />
@@ -197,15 +219,15 @@ export default function OrderForm(props) {
               <input
                 type="radio"
                 id="label-no"
-                name="Custom label"
-                value="not needed"
+                name={content[props.lang].customLabel.question}
+                value={content[props.lang].customLabel.no}
               />
               <label for="label-no">{content[props.lang].customLabel.no}</label>
               <input
                 type="radio"
                 id="label-yes"
-                name="Custom label"
-                value="needed"
+                name={content[props.lang].customLabel.question}
+                value={content[props.lang].customLabel.yes}
               />
               <label for="label-yes">
                 {content[props.lang].customLabel.yes}
@@ -220,7 +242,7 @@ export default function OrderForm(props) {
             <textarea
               className="text-input"
               id="comments"
-              name="Commentary"
+              name={content[props.lang].comment}
               rows="3"
             ></textarea>
           </div>

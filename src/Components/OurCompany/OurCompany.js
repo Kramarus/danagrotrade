@@ -1,17 +1,14 @@
 import React from "react";
 
 const content = {
-  companyTitle: {
-    en: { 1: "Our", 2: "company" },
-    de: { 1: "Unsere", 2: "Firma" },
-    it: "",
-    pl: "",
-    ua: "",
-    ru: { 1: "Наша", 2: "компания" },
-  },
-  aboutInfo: {
-    en: (
-      <div>
+  en: {
+    companyTitle: (
+      <>
+        <span>Our</span> company
+      </>
+    ),
+    aboutInfo: (
+      <>
         <p>
           Dan Agro Trade LLC. is a Ukrainian trade company which supplies the
           European markets with the agricultural products from Ukraine.
@@ -23,10 +20,17 @@ const content = {
           involved in the modernization and re-equipment of agricultural and
           farming facilities.
         </p>
-      </div>
+      </>
     ),
-    de: (
-      <div>
+  },
+  de: {
+    companyTitle: (
+      <>
+        <span>Unsere</span> Firma
+      </>
+    ),
+    aboutInfo: (
+      <>
         <p>
           Dan Agro Trade GmbH ist eine ukrainische Handelgesellschaft, die
           landwirtschaftliche Lebensmittel aus der Ukraine nach Europa liefert.
@@ -37,10 +41,17 @@ const content = {
           28 Jahren herstellt, sowie an der Modernisierung und Umrüstung
           landwirtschaftlicher Einrichtungen teilnimmt.
         </p>
-      </div>
+      </>
     ),
-    it: (
-      <div>
+  },
+  it: {
+    companyTitle: (
+      <>
+        <span>La nostra</span> azienda
+      </>
+    ),
+    aboutInfo: (
+      <>
         <p>
           Dan Agro Trade LLC. è una società commerciale ucraina che rifornisce i
           mercati europei di prodotti agricoli ucraini.
@@ -52,10 +63,17 @@ const content = {
           nella modernizzazione e riattrezzaggio di strutture agricole e
           agricole.
         </p>
-      </div>
+      </>
     ),
-    pl: (
-      <div>
+  },
+  pl: {
+    companyTitle: (
+      <>
+        <span>Nasza</span> firma
+      </>
+    ),
+    aboutInfo: (
+      <>
         <p>
           Dan Agro Trade LLC. jest ukraińską firmą handlową, która zaopatruje
           produkty rolne z Ukrainy na rynki europejskie.
@@ -66,10 +84,17 @@ const content = {
           energetyczne i generatory ciepła do suszarni rolniczych, a także
           zajmuje się modernizacją i wyposażeniem obiektów rolniczych.
         </p>
-      </div>
+      </>
     ),
-    ua: (
-      <div>
+  },
+  ua: {
+    companyTitle: (
+      <>
+        <span>Наша</span> компанiя
+      </>
+    ),
+    aboutInfo: (
+      <>
         <p>
           ТОВ «Дан Агро Трейд» - українська компанія, яка займається експортом
           сільськогосподарської продукції на ринки Західної Європи.
@@ -81,10 +106,17 @@ const content = {
           займається модернізацією зерносушарних комплексів та переоснащенням
           аграрних об’єктів різного призначення.
         </p>
-      </div>
+      </>
     ),
-    ru: (
-      <div>
+  },
+  ru: {
+    companyTitle: (
+      <>
+        <span>Наша</span> компания
+      </>
+    ),
+    aboutInfo: (
+      <>
         <p>
           ТОВ «Дан Агро Трейд» - украинская компания, которая занимается
           экспортом сельскохозяйственной продукции на рынки Западной Европы.
@@ -96,20 +128,17 @@ const content = {
           занимается модернизацией зерносушильных комплексов и переоборудованием
           аграрных объектов разного назначения.
         </p>
-      </div>
+      </>
     ),
   },
 };
 
 function OurCompany(props) {
   return (
-    <section className="company filled">
+    <section className="company filled" id="about">
       <div className="container">
-        <h2 className="section-title">
-          <span>{content.companyTitle[props.lang][1]}</span>{" "}
-          {content.companyTitle[props.lang][2]}
-        </h2>
-        {content.aboutInfo[props.lang]}
+        <h2 className="section-title">{content[props.lang].companyTitle}</h2>
+        {content[props.lang].aboutInfo}
       </div>
     </section>
   );
