@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/danagrotrade/static/css/main.de5c5ae0.css",
-    "main.js": "/danagrotrade/static/js/main.f9f28d25.js",
+    "main.js": "/danagrotrade/static/js/main.d988dabb.js",
     "static/js/787.6388c6ef.chunk.js": "/danagrotrade/static/js/787.6388c6ef.chunk.js",
+    "static/media/bran.jpg": "/danagrotrade/static/media/bran.d17c2e147e6927adb8c7.jpg",
     "static/media/bg.jpg": "/danagrotrade/static/media/bg.221962df51af47b3758b.jpg",
     "static/media/twenty.png": "/danagrotrade/static/media/twenty.7bfbda64903a83a28fa5.png",
-    "static/media/bran.jpg": "/danagrotrade/static/media/bran.a9c6d67fbcc3a217b236.jpg",
-    "static/media/flour.jpg": "/danagrotrade/static/media/flour.95a0c98dc8845ba7b602.jpg",
-    "static/media/semolina.jpg": "/danagrotrade/static/media/semolina.c9e8f82499658b1f41d5.jpg",
+    "static/media/flour.jpg": "/danagrotrade/static/media/flour.8826b9cb4b03b8a2cb39.jpg",
+    "static/media/semolina.jpg": "/danagrotrade/static/media/semolina.8e024eb9f673dbc5dfe3.jpg",
     "static/media/drymilk.jpg": "/danagrotrade/static/media/drymilk.b71472df3ae775847096.jpg",
     "static/media/shipped.png": "/danagrotrade/static/media/shipped.daedc4b3a297be19d5cc.png",
     "static/media/package.png": "/danagrotrade/static/media/package.37cbe4e0a005c5800c76.png",
@@ -15,11 +15,11 @@
     "static/media/logo.png": "/danagrotrade/static/media/logo.094006acbd4b447cad3c.png",
     "index.html": "/danagrotrade/index.html",
     "main.de5c5ae0.css.map": "/danagrotrade/static/css/main.de5c5ae0.css.map",
-    "main.f9f28d25.js.map": "/danagrotrade/static/js/main.f9f28d25.js.map",
+    "main.d988dabb.js.map": "/danagrotrade/static/js/main.d988dabb.js.map",
     "787.6388c6ef.chunk.js.map": "/danagrotrade/static/js/787.6388c6ef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.de5c5ae0.css",
-    "static/js/main.f9f28d25.js"
+    "static/js/main.d988dabb.js"
   ]
 }
