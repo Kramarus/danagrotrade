@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 const content = {
   en: {
-    title: "Ordering form",
+    title: "Get a quote",
     name: "Your name or company name",
     location: "Your location (city and country)",
     email: "Your Email",
@@ -13,6 +13,7 @@ const content = {
       flour: "Wheat flour",
       bran: "Wheat bran",
       semolina: "Semolina",
+      oil: "Sunflower oil",
     },
     volume: "Volume (ton)",
     customLabel: {
@@ -25,7 +26,7 @@ const content = {
     required: "* required fields",
   },
   de: {
-    title: "Bestellungsform",
+    title: "Preis anfragen",
     name: "Ihr Name oder Firmenname",
     location: "Ihr Ort (Land, Stadt)",
     email: "Ihr Email",
@@ -36,6 +37,7 @@ const content = {
       flour: "Weizenmehl",
       bran: "Weizenkleie",
       semolina: "Grieß",
+      oil: "Sonnenblumenöl",
     },
     volume: "Volumen (Tonnen)",
     customLabel: {
@@ -50,7 +52,7 @@ const content = {
   it: {},
   pl: {},
   ua: {
-    title: "Форма замовлення",
+    title: "Запросити цiну",
     name: "Ваше ім'я або назва компанії",
     location: "Ваше місцезнаходження (країна, місто)",
     email: "Ваш Email",
@@ -61,6 +63,7 @@ const content = {
       flour: "Пшеничне борошно",
       bran: "Пшеничні висівки",
       semolina: "Манна крупа",
+      oil: "Соняшникова олія",
     },
     volume: "Об'єм (тонн)",
     customLabel: {
@@ -73,7 +76,7 @@ const content = {
     required: "* обов'язкові поля",
   },
   ru: {
-    title: "Форма заказа",
+    title: "Узнать цену",
     name: "Ваше имя или название компании",
     location: "Ваше местоположение (страна, город)",
     email: "Ваш Email",
@@ -84,6 +87,7 @@ const content = {
       flour: "Пшеничная мука",
       bran: "Пшеничные отруби",
       semolina: "Манная крупа",
+      oil: "Подсолнечное масло",
     },
     volume: "Объём (тонн)",
     customLabel: {
@@ -197,6 +201,9 @@ export default function OrderForm(props) {
                 </option>
                 <option value={content[props.lang].product.semolina}>
                   {content[props.lang].product.semolina}
+                </option>
+                <option value={content[props.lang].product.oil}>
+                  {content[props.lang].product.oil}
                 </option>
               </select>
             </div>

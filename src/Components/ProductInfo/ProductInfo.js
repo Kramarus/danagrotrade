@@ -47,6 +47,9 @@ export default function ProductInfo(props) {
             <div className="product-desc">
               <p>{props.productData.productInfo[props.lang].standard}</p>
               <p>{props.productData.productInfo[props.lang].origin}</p>
+              <p>{props.productData.productInfo[props.lang].preserve}</p>
+              <p>{props.productData.productInfo[props.lang].toxic}</p>
+              <p>{props.productData.productInfo[props.lang].gmo}</p>
             </div>
           </div>
           <div className="modal-table">{props.productData.table}</div>

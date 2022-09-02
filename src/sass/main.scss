@@ -218,16 +218,18 @@ section {
     .products {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
       flex-wrap: wrap;
+      justify-content: space-around;
       flex-shrink: 1;
       .product {
-        width: 400px;
+        width: 300px;
         text-decoration: none;
+        margin: 8px;
         .product-img {
-          width: 400px;
-          height: 268px;
+          width: 300px;
+          height: 201px;
           border-radius: 15px;
+          cursor: pointer;
           &:hover {
             overflow: hidden;
           }
@@ -253,7 +255,7 @@ section {
           .product-cta {
             color: black;
             background-color: transparent;
-            font-size: 24px;
+            font-size: 20px;
             padding: 8px 16px;
             border: 1px solid $dark-color;
             border-radius: 10px;
