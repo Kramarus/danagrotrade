@@ -1,25 +1,25 @@
 {
-  "main.css": "/static/css/main.20ac0bcb.chunk.css",
-  "main.js": "/static/js/main.d32a0d69.chunk.js",
-  "main.js.map": "/static/js/main.d32a0d69.chunk.js.map",
-  "static/js/1.c972895f.chunk.js": "/static/js/1.c972895f.chunk.js",
-  "static/js/1.c972895f.chunk.js.map": "/static/js/1.c972895f.chunk.js.map",
-  "static/js/2.21ed5c30.chunk.js": "/static/js/2.21ed5c30.chunk.js",
-  "static/js/2.21ed5c30.chunk.js.map": "/static/js/2.21ed5c30.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.4431f52a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.4431f52a.js.map",
-  "static/media/logo.png": "/static/media/logo.130e2da0.png",
-  "static/media/shipped.png": "/static/media/shipped.d241e0be.png",
-  "static/media/package.png": "/static/media/package.d20bdca5.png",
-  "static/media/twenty.png": "/static/media/twenty.806359bf.png",
-  "static/media/flour.jpg": "/static/media/flour.eddba8f3.jpg",
-  "static/media/bran.jpg": "/static/media/bran.cfb61672.jpg",
-  "static/media/semolina.jpg": "/static/media/semolina.68ff8311.jpg",
-  "static/media/oil.jpg": "/static/media/oil.a4fa1f13.jpg",
-  "static/media/drymilk.jpg": "/static/media/drymilk.e81cb894.jpg",
-  "static/media/style.css": "/static/media/bg.d3f0f5ce.jpg",
-  "static/css/main.20ac0bcb.chunk.css.map": "/static/css/main.20ac0bcb.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.b139a087b8341f9c3caa2394e99e0aae.js": "/precache-manifest.b139a087b8341f9c3caa2394e99e0aae.js",
-  "service-worker.js": "/service-worker.js"
+  "files": {
+    "main.css": "/static/css/main.492f5ea2.css",
+    "main.js": "/static/js/main.d7dda6b1.js",
+    "static/js/787.6388c6ef.chunk.js": "/static/js/787.6388c6ef.chunk.js",
+    "static/media/bran.jpg": "/static/media/bran.d17c2e147e6927adb8c7.jpg",
+    "static/media/bg.jpg": "/static/media/bg.221962df51af47b3758b.jpg",
+    "static/media/twenty.png": "/static/media/twenty.7bfbda64903a83a28fa5.png",
+    "static/media/flour.jpg": "/static/media/flour.8826b9cb4b03b8a2cb39.jpg",
+    "static/media/semolina.jpg": "/static/media/semolina.8e024eb9f673dbc5dfe3.jpg",
+    "static/media/drymilk.jpg": "/static/media/drymilk.b71472df3ae775847096.jpg",
+    "static/media/shipped.png": "/static/media/shipped.daedc4b3a297be19d5cc.png",
+    "static/media/package.png": "/static/media/package.37cbe4e0a005c5800c76.png",
+    "static/media/oil.jpg": "/static/media/oil.1e8032e77011445247f6.jpg",
+    "static/media/logo.png": "/static/media/logo.094006acbd4b447cad3c.png",
+    "index.html": "/index.html",
+    "main.492f5ea2.css.map": "/static/css/main.492f5ea2.css.map",
+    "main.d7dda6b1.js.map": "/static/js/main.d7dda6b1.js.map",
+    "787.6388c6ef.chunk.js.map": "/static/js/787.6388c6ef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.492f5ea2.css",
+    "static/js/main.d7dda6b1.js"
+  ]
 }
