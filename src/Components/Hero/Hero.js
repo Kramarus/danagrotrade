@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink as Link } from 'react-router-hash-link';
 
 import shipped from "./img/shipped.png";
 import packaging from "./img/package.png";
@@ -104,9 +105,9 @@ export default function Hero(props) {
             <button className="cta cta-primary" onClick={props.openForm}>
               {props.content[props.lang].ctaPrimary}
             </button>
-            <a className="cta cta-secondary" href="#our-production">
+            <Link className="cta cta-secondary" to="#our-production">
               {props.content[props.lang].ctaSecondary}
-            </a>
+            </Link>
           </div>
         </div>
         <div className="hero-features">{features}</div>

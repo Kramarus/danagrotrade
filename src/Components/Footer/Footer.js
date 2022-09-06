@@ -1,4 +1,6 @@
 import React from "react";
+import { HashLink as Link } from 'react-router-hash-link';
+
 import danAgroLogo from "../Navbar/img/logo.png";
 
 const content = {
@@ -222,18 +224,18 @@ function Footer(props) {
             <h3>{content[props.lang].links.title}</h3>
             <ul>
               <li>
-                <a href="#home">{content[props.lang].links.home}</a>
+                <Link to="#home">{content[props.lang].links.home}</Link>
               </li>
               <li>
-                <a href="#our-production">
+                <Link to="#our-production">
                   {content[props.lang].links.products}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#advantages">{content[props.lang].links.advantages}</a>
+                <Link to="#advantages">{content[props.lang].links.advantages}</Link>
               </li>
               <li>
-                <a href="#about">{content[props.lang].links.about}</a>
+                <Link to="#about">{content[props.lang].links.about}</Link>
               </li>
             </ul>
           </div>
