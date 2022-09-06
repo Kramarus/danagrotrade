@@ -428,8 +428,8 @@ export default function Products(props) {
           label: <>Sunflower oil</>,
           standard: (
             <>
-              Sunflower seed oil in accordance with the International Technical
-              Standard (GOST) 7022-97.
+              Sunflower seed oil in accordance with the State Technical
+              Standard of Ukraine (DSTU)  4492-2017 .
             </>
           ),
           origin: <>Country of origin: Ukraine</>,
@@ -448,8 +448,8 @@ export default function Products(props) {
           label: <>Sonnenblumenöl</>,
           standard: (
             <>
-              Sonnenblumenöl laut dem Internationalen Technischen Standart
-              (GOST) 7022-97
+              Sonnenblumenöl laut dem Staatlichen Technischen Standart der Ukraine
+              (DSTU) 4492-2017
             </>
           ),
           origin: <>Herkunftsland: die Ukraine.</>,
@@ -469,7 +469,7 @@ export default function Products(props) {
         },
         ua: {
           label: <>Соняшникова олія</>,
-          standard: <>Соняшникова олія відповідно до ГОСТ 7022-97</>,
+          standard: <>Соняшникова олія відповідно до ДСТУ 4492-2017</>,
           origin: <>Країна походження сировини: Україна</>,
           preserve: (
             <>Зберігати в темному приміщенні при температурі від 8°C до 25°C.</>
@@ -483,7 +483,7 @@ export default function Products(props) {
         },
         ru: {
           label: <>Подсолнечное масло</>,
-          standard: <>Подсолнечное масло в соответствии с ГОСТ 7022-97</>,
+          standard: <>Подсолнечное масло в соответствии с ДСТУ 4492-2017</>,
           origin: <>Страна происхождения сырья: Украина</>,
           preserve: (
             <>Хранить в темном месте при температуре от 8°C до 25°C.</>
@@ -539,8 +539,7 @@ export default function Products(props) {
           label: <>Wheat bran</>,
           standard: (
             <>
-              Wheat bran in accordance with the State Technical Standard (DSTU)
-              3016-95.
+              Wheat bran in accordance with the State Technical Standard of Ukraine (DSTU) 3016-95.
             </>
           ),
           origin: <>Country of origin: Ukraine</>,
@@ -549,8 +548,7 @@ export default function Products(props) {
           label: <>Weizenkleie</>,
           standard: (
             <>
-              Weizenkleie laut dem Staatlichen Technischen Standart der Ukraine
-              (DSTU) 3016-95
+              Weizenkleie laut dem Staatlichen Technischen Standart der Ukraine (DSTU) 3016-95
             </>
           ),
           origin: <>Herkunftsland: die Ukraine</>,
@@ -651,8 +649,8 @@ export default function Products(props) {
           label: <>Powdered milk</>,
           standard: (
             <>
-              Powdered milk in accordance with the International Technical
-              Standard (GOST) 7022-97.
+              Powdered milk in accordance with the State Technical
+              Standard of Ukraine (DSTU) 4556-2006.
             </>
           ),
           origin: <>Country of origin: Ukraine</>,
@@ -661,20 +659,19 @@ export default function Products(props) {
           label: <>Milchpulver</>,
           standard: (
             <>
-              Milchpulver dem Internationalen Technischen Standart (GOST)
-              7022-97
+              Milchpulver dem Staatlichen Technischen Standart der Ukraine (DSTU) 4556-2006
             </>
           ),
           origin: <>Herkunftsland: die Ukraine</>,
         },
         ua: {
           label: <>Сухе молоко</>,
-          standard: <>Сухе молоко відповідно до ГОСТ 7022-97</>,
+          standard: <>Сухе молоко відповідно до ДСТУ 4556-2006</>,
           origin: <>Країна походження сировини: Україна</>,
         },
         ru: {
           label: <>Сухое молоко</>,
-          standard: <>Сухое молоко в соответствии с ГОСТ 7022-97</>,
+          standard: <>Сухое молоко в соответствии с ДСТУ 4556-2006</>,
           origin: <>Страна происхождения сырья: Украина</>,
         },
       },
