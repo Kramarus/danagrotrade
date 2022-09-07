@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate, Route } from "react-router-dom";
 
 import Navbar from "../Navbar/Navbar";
 import Hero from "../Hero/Hero";
@@ -7,7 +8,7 @@ import Advantages from "../Advantages/Advantages";
 import OurCompany from "../OurCompany/OurCompany";
 import Footer from "../Footer/Footer";
 import OrderForm from "../OrderForm/OrderForm";
-import { useNavigate } from "react-router-dom";
+import Thankyou from "../Thankyou/Thankyou";
 
 const content = {
   en: {
@@ -78,12 +79,11 @@ const content = {
 };
 
 export default function Landing(props) {
-  var [lang, setLang] = useState("en");
-
+  
   const navigate = useNavigate();
 
   const changeLang = (e) => {
-    const lang = e.target.value
+    const lang = e.target.value;
     navigate("/" + lang);
   };
 
@@ -95,9 +95,8 @@ export default function Landing(props) {
 
   const closeForm = (e) => {
     if (
-      e.tagret === document.getElementById("form-x-btn") ||
-      (e.target === document.getElementById("modalOverlay") &&
-        e.target !== document.getElementById("modalOrderForm"))
+      e.target === document.getElementById("modalOverlay") &&
+      e.target !== document.getElementById("modalOrderForm")
     ) {
       setFormDisplay((formDisplay = false));
     }
@@ -107,6 +106,35 @@ export default function Landing(props) {
     setFormDisplay((formDisplay = false));
   };
 
+  var [thank, setThank] = useState(false);
+
+  const openThank = () => {
+    setThank(thank = true);
+  }
+
+  const closeThank = () => {
+    setThank(thank = false);
+  }
+
+  const closeThankOutside = (e) => {
+    if (
+      e.target === document.getElementById("modalOverlayThank") &&
+      e.target !== document.getElementById("modalThank")
+    ) {
+      setThank(thank = false);
+    }
+  };
+
+
+  // const closeThank = (e) => {
+  //   if (
+  //     e.target === document.getElementById("modalOverlayThank") &&
+  //     e.target !== document.getElementById("modalThank")
+  //   ) {
+  //     setThank({ thank: false });
+  //   }
+  // };
+
   return (
     <div className="background-image">
       {formDisplay ? (
@@ -114,6 +142,15 @@ export default function Landing(props) {
           lang={props.lang}
           closeForm={closeForm}
           xCloseForm={xCloseForm}
+          openThank={openThank}
+        />
+      ) : null}
+      {thank ? (
+        <Thankyou
+          lang={props.lang}
+          openForm={openForm}
+          close={closeThank}
+          closeOutside={closeThankOutside}
         />
       ) : null}
       <Navbar

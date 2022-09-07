@@ -1,6 +1,8 @@
 import React from "react";
 import { HashLink as Link } from 'react-router-hash-link';
 
+import Thankyou from "../Thankyou/Thankyou";
+
 import shipped from "./img/shipped.png";
 import packaging from "./img/package.png";
 import twenty from "./img/twenty.png";

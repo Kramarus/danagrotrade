@@ -5,8 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import danAgroLogo from "./img/logo.png";
 
 function Navbar(props) {
-  const navigate = useNavigate();
-
   return (
     <section className="navbar container">
       <div className="logo-row">

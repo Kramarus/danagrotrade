@@ -3,6 +3,7 @@
 @import "./design/typography";
 @import "./components/modalOrderForm";
 @import "./components/modalProductInfo";
+@import "./components/modalThankyou";
 
 html {
   scroll-behavior: smooth;
@@ -123,7 +124,7 @@ section {
 .background-image {
   color: $light-color;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../img/bg.jpg");
+    url("../img/bg1.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const content = {
   en: {
@@ -102,6 +102,7 @@ const content = {
 };
 
 export default function OrderForm(props) {
+  
   const validateForm = (e) => {
     const nameField = document.getElementById("name");
 
@@ -142,6 +143,10 @@ export default function OrderForm(props) {
           action="https://formsubmit.co/bb578093b6a53e03850716bdb2a99164"
           method="POST"
           className="modal-body"
+          onSubmit={() => {
+            props.xCloseForm();
+            props.openThank();
+          }}
         >
           {/* Name */}
           <div className="form-query">
@@ -272,7 +277,7 @@ export default function OrderForm(props) {
             <input
               type="hidden"
               name="_next"
-              value="https://dan-agro.com/thankyou.html"
+              value="https://dan-agro.com/"
             />
             <input type="hidden" name="_subject" value="Product order" />
             <input type="hidden" name="_template" value="table" />
@@ -282,7 +287,9 @@ export default function OrderForm(props) {
             <button
               type="submit"
               className="cta-form-submit"
-              onClick={validateForm}
+              onClick={() => {
+                validateForm();
+              }}
             >
               {content[props.lang].submit}
             </button>
