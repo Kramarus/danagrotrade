@@ -3,37 +3,38 @@ import React from "react";
 export default function Thankyou(props) {
   const content = {
     en: {
-      thankyou: <>Thank you!</>,
+      thankyou: <>Your request was successfully sent</>,
       text: (
         <>
-          We have received your request and will answer you within several hours
+          Thank you for contacting us! We have received your message
+          and our representatives will contact you as soon as possible.
         </>
       ),
       backButton: <>Back</>,
     },
     de: {
-      thankyou: <>Danke!</>,
+      thankyou: <>Ihre Anfrage war erfolgreich geschickt</>,
       text: (
         <>
-          We have receiver your request and will answer you within several hours
+          Danke dafür, dass Sie uns kontaktiert haben! Wir haben Ihre Nachricht bekommen und unsere Verträter werden Ihnen so früh wie möglich antworten.
         </>
       ),
       backButton: <>Zurück</>,
     },
     ua: {
-      thankyou: <>Дякуємо!</>,
+      thankyou: <>Ваш запит було успішно надіслано</>,
       text: (
         <>
-          We have receiver your request and will answer you within several hours
+          Дякуємо Вам за те, що Ви нам написали! Ми отримали Ваше повідомлення і наші представники незабаром Вам нададуть відповідь.
         </>
       ),
       backButton: <>Назад</>,
     },
     ru: {
-      thankyou: <>Спасибо</>,
+      thankyou: <>Ваш запрос был успешно отправлен</>,
       text: (
         <>
-          We have receiver your request and will answer you within several hours
+          Спасибо Вам за то, что Вы нам написали! Мы получили Ваше сообщение и наши представители скоро Вам ответят.
         </>
       ),
       backButton: <>Назад</>,
@@ -50,7 +51,7 @@ export default function Thankyou(props) {
         <div className="container modalThankyou" id="modalThank">
           <div className="modal-header">
             <div className="">
-              <h2>{content[props.lang].thankyou}</h2>
+              <h3>{content[props.lang].thankyou}</h3>
             </div>
           </div>
           <div className="modal-body">

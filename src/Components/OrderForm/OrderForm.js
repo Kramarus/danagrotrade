@@ -23,7 +23,8 @@ const content = {
       yes: "Yes",
     },
     comment: "Commentary (your demands to quality level, package etc.)",
-    submit: "Send",
+    submitBtn: "Send",
+    backBtn: "Back",
     required: "* required fields",
   },
   de: {
@@ -47,7 +48,8 @@ const content = {
       yes: "Ja",
     },
     comment: "Kommentar (Ihre Anforderungen an Qualität, Verpackung etc.)",
-    submit: "Schicken",
+    submitBtn: "Schicken",
+    backBtn: "Zurück",
     required: "* Pflichtfelder",
   },
   it: {},
@@ -73,7 +75,8 @@ const content = {
       yes: "Так",
     },
     comment: "Коментар (Ваші вимоги до рівня якості, упаковки тощо)",
-    submit: "Надіслати",
+    submitBtn: "Надіслати",
+    backBtn: "Назад",
     required: "* обов'язкові поля",
   },
   ru: {
@@ -97,7 +100,8 @@ const content = {
       yes: "Да",
     },
     comment: "Коментарий (Ваши требования к уровню качества, упаковке и т.д.)",
-    submit: "Отправить",
+    submitBtn: "Отправить",
+    backBtn: "Назад",
     required: "* обязательные поля",
   },
 };
@@ -300,7 +304,10 @@ export default function OrderForm(props) {
           {/* Buttons */}
           <div className="form-buttons-row">
             <button type="submit" className="cta-form-submit" onClick={validateForm}>
-              {content[props.lang].submit}
+              {content[props.lang].submitBtn}
+            </button>
+            <button type="submit" className="cta-form-close" onClick={props.xCloseForm}>
+              {content[props.lang].backBtn}
             </button>
           </div>
         </form>

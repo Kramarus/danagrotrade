@@ -11,14 +11,14 @@
   z-index: 1000;
   .modalThankyou {
     box-sizing: border-box;
-    max-width: 480px;
+    max-width: 560px;
     background-color: $primary-color;
     z-index: 1500;
     opacity: 1;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 24px;
     color: $dark-color;
     .modal-header {
       border-bottom: 1px solid $secondary-color;
@@ -26,8 +26,15 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      h3 {
+        padding-bottom: 16px;
+      }
     }
     .modal-body {
+      p {
+        font-size: 16px;
+        line-height: 1.4;
+      }
       button {
         background-color: transparent;
         color: $dark-color;

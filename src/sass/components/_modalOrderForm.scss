@@ -101,11 +101,13 @@
           color: $light-color;
           box-shadow: none;
           border: none;
+          margin-right: 16px;
         }
         .cta-form-close {
           @extend %cta-form;
-          border: 2px solid $light-color;
+          border: 2px solid #E52B50;
           color: $light-color;
+          background-color: #E52B50;
         }
       }
     }

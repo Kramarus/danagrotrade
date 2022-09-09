@@ -1,6 +1,7 @@
 @import "./helpers/variables";
 @import "./layout/responsive";
 @import "./design/typography";
+@import "./components/buttons";
 @import "./components/modalOrderForm";
 @import "./components/modalProductInfo";
 @import "./components/modalThankyou";
@@ -90,37 +91,6 @@ section {
   }
 }
 
-.cta {
-  margin: 16px 0;
-  padding: 16px 32px;
-  border-radius: 10px;
-  border: none;
-  font-size: 24px;
-  text-decoration: none;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: transform 0.5s;
-  }
-  &.cta-primary {
-    background-color: $primary-color;
-    color: $dark-color;
-    &:hover {
-      background-color: $secondary-color;
-      color: $light-color;
-    }
-  }
-  &.cta-secondary {
-    color: $light-color;
-    background-color: transparent;
-    border: 2px solid $light-color;
-    &:hover {
-      background-color: $light-color;
-      color: $dark-color;
-    }
-  }
-}
-
 .background-image {
   color: $light-color;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -190,7 +160,7 @@ section {
       margin: 16px 0;
       box-sizing: border-box;
       .hero-feature-img {
-        width: 4vw;
+        width: 80px;
         display: flex;
         align-items: center;
         img {
