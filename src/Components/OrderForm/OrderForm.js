@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const content = {
   en: {
@@ -102,8 +103,7 @@ const content = {
 };
 
 export default function OrderForm(props) {
-  
-  const validateForm = (e) => {
+  const validateForm = () => {
     const nameField = document.getElementById("name");
 
     if (nameField.value.includes("CryptoCep")) {
@@ -111,8 +111,31 @@ export default function OrderForm(props) {
     }
   };
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_t3g0qae",
+        "template_8k4br6n",
+        form.current,
+        "LHnq7SREKvjXiCNxZ"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    props.xCloseForm();
+    props.openThank();
+  };
+
   return (
-    <div className="modalOverlay" id="modalOverlay" onClick={props.closeForm}>
+    <div className="modalOverlay" id="modalOverlay">
       <div className="container modalOrderForm" id="modalOrderForm">
         <div className="modal-header">
           <div className="">
@@ -140,13 +163,13 @@ export default function OrderForm(props) {
           </div>
         </div>
         <form
-          action="https://formsubmit.co/bb578093b6a53e03850716bdb2a99164"
-          method="POST"
+          ref={form}
+          onSubmit={sendEmail}
           className="modal-body"
-          onSubmit={() => {
-            props.xCloseForm();
-            props.openThank();
-          }}
+          // action="https://formsubmit.co/bb578093b6a53e03850716bdb2a99164"
+          // method="POST"
+          // onSubmit={() => {
+          // }}
         >
           {/* Name */}
           <div className="form-query">
@@ -156,7 +179,7 @@ export default function OrderForm(props) {
             <input
               type="text"
               className="text-input"
-              name={content[props.lang].name}
+              name="name"
               id="name"
               required
             />
@@ -169,7 +192,7 @@ export default function OrderForm(props) {
             <input
               type="text"
               className="text-input"
-              name={content[props.lang].location}
+              name="location"
               id="location"
               required
             />
@@ -181,7 +204,7 @@ export default function OrderForm(props) {
             <input
               type="text"
               className="text-input"
-              name={content[props.lang].email}
+              name="email"
               id="email"
               required
             />
@@ -193,7 +216,7 @@ export default function OrderForm(props) {
             <input
               type="text"
               className="text-input"
-              name={content[props.lang].phone}
+              name="phone"
               id="phoneNumber"
             />
           </div>
@@ -204,11 +227,7 @@ export default function OrderForm(props) {
                 {content[props.lang].product.label}
               </label>
 
-              <select
-                className="form-select mb-3"
-                id="product"
-                name={content[props.lang].product.label}
-              >
+              <select className="form-select mb-3" id="product" name="product">
                 <option selected>{content[props.lang].product.choose}</option>
                 <option value={content[props.lang].product.flour}>
                   {content[props.lang].product.flour}
@@ -231,7 +250,7 @@ export default function OrderForm(props) {
               <input
                 type="text"
                 className="text-input"
-                name={content[props.lang].volume}
+                name="volume"
                 id="volume"
                 required
               />
@@ -243,14 +262,14 @@ export default function OrderForm(props) {
               <input
                 type="radio"
                 id="label-no"
-                name={content[props.lang].customLabel.question}
+                name="label"
                 value={content[props.lang].customLabel.no}
               />
               <label for="label-no">{content[props.lang].customLabel.no}</label>
               <input
                 type="radio"
                 id="label-yes"
-                name={content[props.lang].customLabel.question}
+                name="label"
                 value={content[props.lang].customLabel.yes}
               />
               <label for="label-yes">
@@ -266,31 +285,21 @@ export default function OrderForm(props) {
             <textarea
               className="text-input"
               id="comments"
-              name={content[props.lang].comment}
+              name="comment"
               rows="3"
             ></textarea>
           </div>
           {content[props.lang].required}
           {/* Hidden queries */}
-          <>
+          {/* <>
             <input type="hidden" name="_captcha" value="false" />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://dan-agro.com/"
-            />
+            <input type="hidden" name="_next" value="https://dan-agro.com/" />
             <input type="hidden" name="_subject" value="Product order" />
             <input type="hidden" name="_template" value="table" />
-          </>
+          </> */}
           {/* Buttons */}
           <div className="form-buttons-row">
-            <button
-              type="submit"
-              className="cta-form-submit"
-              onClick={() => {
-                validateForm();
-              }}
-            >
+            <button type="submit" className="cta-form-submit" onClick={validateForm}>
               {content[props.lang].submit}
             </button>
           </div>
