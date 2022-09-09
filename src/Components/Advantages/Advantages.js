@@ -3,151 +3,25 @@ import advImage1 from "../../img/inventory.png";
 import advImage2 from "../../img/inventory.png";
 import advImage3 from "../../img/inventory.png";
 
-const content = {
-  en: {
-    advantagesTitle: (
-      <>
-        <span>Our</span> advantages
-      </>
-    ),
-    advantage1: {
-      title: <>Quality</>,
-      text: (
-        <>
-          The best food products of Ukrainian origin. We buy products from
-          trusted farmers only.
-        </>
-      ),
-    },
-    advantage2: {
-      title: <>Efficiency</>,
-      text: (
-        <>
-          Convenient 24/7 service.Delivery across Ukraine and all over Europe.
-        </>
-      ),
-    },
-    advantage3: {
-      title: <>Responsibility</>,
-      text: (
-        <>
-          Trusted cooperation and long term partnership on mutually beneficial
-          terms.
-        </>
-      ),
-    },
-  },
-  de: {
-    advantagesTitle: (
-      <>
-        <span>Unsere</span> Vorteile
-      </>
-    ),
-    advantage1: {
-      title: <>Qualität</>,
-      text: (
-        <>
-          Die besten Lebensmittel aus der Ukraine. Wir kaufen unsere Produkte
-          von vertrauenswürdigen Bauern ein.
-        </>
-      ),
-    },
-    advantage2: {
-      title: <>Effizienz</>,
-      text: (
-        <>Bequemes 24/7 Service. Lieferung in der Ukraine und in ganz Europa.</>
-      ),
-    },
-    advantage3: {
-      title: <>Verantwortung</>,
-      text: (
-        <>
-          Vertrauensvolle Zusammenarbeit und langfristige Partnerschaft zu
-          vorteilhaften Bedingungen.
-        </>
-      ),
-    },
-  },
-  ua: {
-    advantagesTitle: (
-      <>
-        <span>Наші</span> переваги
-      </>
-    ),
-    advantage1: {
-      title: <>Якість</>,
-      text: (
-        <>
-          Найкраща продукція українського походження. Закупівля продукції тільки
-          у перевірених агровиробників.
-        </>
-      ),
-    },
-    advantage2: {
-      title: <>Оперативність</>,
-      text: (
-        <>Зручний сервіс у режимі 24/7. Доставка по Україні та всій Європі.</>
-      ),
-    },
-    advantage3: {
-      title: <>Надійність</>,
-      text: (
-        <>
-          Довірча співпраця та довгострокові партнерські відносини на
-          взаємовигідні умови.
-        </>
-      ),
-    },
-  },
-  ru: {
-    advantagesTitle: (
-      <>
-        <span>Наши</span> преимущества
-      </>
-    ),
-    advantage1: {
-      title: <>Качество</>,
-      text: (
-        <>
-          Лучшая продукция украинского происхождения.Закупка продукции только у
-          проверенных агропроизводителей.
-        </>
-      ),
-    },
-    advantage2: {
-      title: <>Оперативность</>,
-      text: (
-        <>Удобный сервис в режиме 24/7. Доставка по Украине и всей Европе.</>
-      ),
-    },
-    advantage3: {
-      title: <>Надёжность</>,
-      text: (
-        <>
-          Доверительное сотрудничество и долгосрочные партнёрские отношения на
-          взаимовыгодных условиях.
-        </>
-      ),
-    },
-  },
-};
+import contentAdvantages from "../../content/contentAdvantages";
+
 
 function Advantages(props) {
   const advantagesData = [
     {
       src: advImage1,
-      title: content[props.lang].advantage1.title,
-      text: content[props.lang].advantage1.text,
+      title: contentAdvantages[props.lang].advantage1.title,
+      text: contentAdvantages[props.lang].advantage1.text,
     },
     {
       src: advImage2,
-      title: content[props.lang].advantage2.title,
-      text: content[props.lang].advantage2.text,
+      title: contentAdvantages[props.lang].advantage2.title,
+      text: contentAdvantages[props.lang].advantage2.text,
     },
     {
       src: advImage3,
-      title: content[props.lang].advantage3.title,
-      text: content[props.lang].advantage3.text,
+      title: contentAdvantages[props.lang].advantage3.title,
+      text: contentAdvantages[props.lang].advantage3.text,
     },
   ];
 
@@ -166,12 +40,9 @@ function Advantages(props) {
   });
 
   return (
-    <section className="advantages" id="advantages">
-      <div className="container">
-        <h2 className="section-title">{content[props.lang].advantagesTitle}</h2>
-        <div className="advantages-row">{advantages}</div>
-      </div>
-    </section>
+    <div className="advantages component" id="advantages">
+      <div className="advantages-row">{advantages}</div>
+    </div>
   );
 }
 

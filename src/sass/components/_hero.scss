@@ -1,0 +1,194 @@
+////////////////////////////////// Non-responsive
+main.hero {
+  .hero-banner {
+    display: flex;
+    justify-content: space-between;
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      color: $light-color;
+      .cta-group {
+        display: flex;
+        flex-direction: row;
+        .cta-primary {
+          margin-right: 16px;
+        }
+      }
+    }
+    .hero-features {
+      display: flex;
+    }
+  }
+}
+
+////////////////////////////////// Responsive
+
+@media screen and (min-width: 1313px) {
+  .hero-banner {
+    flex-direction: row;
+    margin: 32px 0;
+    .hero-content {
+      width: 720px;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+    .hero-features {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .hero-feature {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 16px 0;
+        box-sizing: border-box;
+        .hero-feature-img {
+          width: 64px;
+          display: flex;
+          align-items: center;
+          img {
+            width: 100%;
+            height: 100%;
+            &:hover {
+              transform: scale(1.1);
+              transition: transform 0.5s;
+            }
+          }
+        }
+        .hero-feature-content {
+          width: 320px;
+          color: $light-color;
+          margin: 10px 0;
+          display: flex;
+          align-items: center;
+          p {
+            font-size: 20px;
+            margin: auto 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1312px) {
+  .hero-banner {
+    flex-direction: column;
+    align-items: center;
+    margin: 160px auto;
+    .hero-content {
+      width: 720px;
+    }
+    .hero-features {
+      flex-direction: row;
+      max-width: auto;
+      margin: 16px auto;
+      .hero-feature {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 16px 0;
+        box-sizing: border-box;
+        .hero-feature-img {
+          width: 64px;
+          display: flex;
+          align-items: center;
+          img {
+            width: 100%;
+            height: 100%;
+            &:hover {
+              transform: scale(1.1);
+              transition: transform 0.5s;
+            }
+          }
+        }
+        .hero-feature-content {
+          width: 320px;
+          color: $light-color;
+          margin: 10px 0;
+          display: flex;
+          align-items: center;
+          p {
+            font-size: 20px;
+            margin: auto 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+}
+
+@media screen and (max-width: 800px) {
+  //////////////////////// Hero
+  section.hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 16px auto !important;
+    .hero-content {
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      h1 {
+        color: $light-color;
+        margin: 0;
+        font-size: 32px;
+      }
+      h2 {
+        color: $light-color;
+        margin: 24px 0;
+        font-size: 24px;
+      }
+      .cta-group {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center !important;
+        .cta-primary {
+          margin-right: 0 !important;
+        }
+      }
+    }
+    .hero-features {
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center !important;
+    }
+    .hero-feature {
+      display: flex;
+      margin: 16px 0;
+      box-sizing: border-box;
+      .hero-feature-img {
+        width: 40px !important;
+        display: flex;
+        align-items: center;
+        img {
+          width: 100%;
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s;
+          }
+        }
+      }
+      .hero-feature-content {
+        width: 240px;
+        color: $light-color;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        p {
+          font-size: 16px !important;
+          margin: auto 16px;
+        }
+      }
+    }
+  }
+}

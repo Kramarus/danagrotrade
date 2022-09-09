@@ -10,7 +10,7 @@
   background: fade-out($dark-color, 0.3);
   z-index: 1000;
   .modalOrderForm {
-    max-height: 100vh;
+    max-height: 100vh!important;
     overflow-y: auto;
     box-sizing: border-box;
     max-width: 480px;
@@ -34,7 +34,7 @@
         cursor: pointer;
         svg {
           height: 32px;
-          width: 100px;
+          width: 32px;
           &:hover {
             transform: scale(1.1);
             transition: transform 0.5s;

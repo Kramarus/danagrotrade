@@ -1,5 +1,6 @@
 import React from "react";
 
+import content from "../../content/content";
 export default function ProductInfo(props) {
 
   const handleClick = () => {
@@ -9,7 +10,7 @@ export default function ProductInfo(props) {
 
   return (
     <div
-      className="modalOverlay"
+      className="modalOverlay component"
       id="modalOverlay"
       onClick={props.closeProduct}
     >
@@ -55,7 +56,7 @@ export default function ProductInfo(props) {
           <div className="modal-table">{props.productData.table}</div>
         </div>
         <div className="modal-footer">
-          <a className="cta cta-primary" onClick={handleClick}>{props.content[props.lang].ctaPrimary}</a>
+          <a className="cta cta-primary" onClick={handleClick}>{content[props.lang].ctaPrimary}</a>
         </div>
       </div>
     </div>

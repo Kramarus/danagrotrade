@@ -1,0 +1,30 @@
+.advantages-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    & > div {
+      flex: 1;
+    }
+    .advantage {
+      padding: 48px;
+      .img-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          padding: 24px;
+        }
+      }
+      h3 {
+        color: $light-color;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      p {
+        color: $light-color;
+        text-align: start;
+        font-size: 16px;
+      }
+    }
+  }

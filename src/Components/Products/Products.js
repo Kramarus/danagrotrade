@@ -9,262 +9,12 @@ import semolinaImg from "./img/semolina.jpg";
 import oilImg from "./img/oil.jpg";
 import drymilkImg from "./img/drymilk.jpg";
 
-const content = {
-  en: {
-    productsTitle: (
-      <>
-        <span>Our</span> production
-      </>
-    ),
-    flourLabel: <>Wheat flour</>,
-    branLabel: <>Wheat bran</>,
-    semolinaLabel: <>Semolina</>,
-  },
-  de: {
-    productsTitle: (
-      <>
-        <span>Unsere</span> Produkte
-      </>
-    ),
-    flourLabel: <>Weizenmehl</>,
-    branLabel: <>Weizenkleie</>,
-    semolinaLabel: <>Grieß</>,
-  },
-  ua: {
-    productsTitle: (
-      <>
-        <span>Наші</span> продукти
-      </>
-    ),
-    flourLabel: <>Пшеничне борошно</>,
-    branLabel: <>Пшеничні висівки</>,
-    semolinaLabel: <>Манна крупа</>,
-  },
-  ru: {
-    productsTitle: (
-      <>
-        <span>Наши</span> продукты
-      </>
-    ),
-    flourLabel: <>Пшеничная мука</>,
-    branLabel: <>Пшеничные отруби</>,
-    semolinaLabel: <>Манная крупа</>,
-  },
-};
+import tableData from "../../content/tableData";
+
+
 
 export default function Products(props) {
-  ////////
-  var [state, setState] = useState({ productDisplay: false });
 
-  const closeProduct = (e) => {
-    if (
-      e.target === document.getElementById("modalOverlay") &&
-      e.target !== document.getElementById("modalOrderForm")
-    ) {
-      setState({ productDisplay: false });
-    }
-  };
-
-  const xCloseProduct = () => {
-    setState({ productDisplay: false });
-  };
-
-  const tableData = {
-    en: {
-      grade: <>Grade</>,
-      highest: <>highest</>,
-      first: <>first</>,
-      color: <>Color</>,
-      colorFlour: <>White or white with yellow shade</>,
-      colorBran: <>Red-yellow with grey shade</>,
-      colorSemolina: <>White with creme shade</>,
-      moisture: <>Moisture, %, max</>,
-      ash: <>Ash content in terms of dry matter, %, max</>,
-      gluten: <>Raw gluten content, %, min</>,
-      falling: <>Falling number, min</>,
-      protein: <>Protein content in terms of dry matter, %</>,
-      packaging: <>Packaging</>,
-      order: <>Min. order</>,
-      orderValue: <>from 20 ton</>,
-      kg: <>kg</>,
-      sort: <>Sort</>,
-      sortValue: <>Refined deodorized winterized sunflower seed oil mark "P"</>,
-      clarity: <>Clarity</>,
-      clarityValue: <>Transparent, without sediment</>,
-      flavor: <>Flavor</>,
-      flavorValue: <>impersonal to taste and smell</>,
-      colorValue: <>Color value, mg iodine</>,
-      acid: <>Acid number, mg KOH/g</>,
-      none: <>none</>,
-      phosphorus: (
-        <>
-          Phosphorus-containing substances recalculated as per
-          stearoleolecitiny, %
-        </>
-      ),
-      mixtures: <>Non-oil admixtures, %</>,
-      moistureVolatile: <>Moisture and volatile substances, %</>,
-      peroxide: <>Peroxide number, 1/2 O mmol/kg</>,
-      shelfLife: <>Shelf life starting from manufacturing date</>,
-      months: <>months</>,
-      purpose: <>Product purpose</>,
-      purposeValue: <>for food</>,
-      energy: <>Energy value (calorie content) in 100g of the product</>,
-      energyValue: <>899 kcal (3761 kJ)</>,
-      nutritional: <>Nutritional value (food) in 100g of the product:</>,
-      nutritionalValue: <>Fat - 99,9 g.</>,
-      netWeight: <>Net weight of 1 liter</>,
-      netWeightValue: <>0,92 kg</>,
-    },
-    de: {
-      grade: <>Sorte</>,
-      highest: <>premium</>,
-      first: <>erste</>,
-      color: <>Farbe</>,
-      colorFlour: <>Weiß oder weiß mit gelbem Schatten</>,
-      colorBran: <>Rot-gelb mit grauen Schatten</>,
-      colorSemolina: <>Weiß mit cremefarbenen Schatten</>,
-      moisture: <>Feuchtigkeit, %, max</>,
-      ash: <>Aschegehalt bezogen auf Trockenmasse, %, max</>,
-      gluten: <>Rohglutengehalt, %, mind</>,
-      falling: <>Fallzahl, mind</>,
-      protein: <>Proteingehalt in der Trockenmasse, %</>,
-      packaging: <>Verpackung</>,
-      order: <>Mind. Bestellung</>,
-      orderValue: <>ab 20 Tonnen</>,
-      kg: <>kg</>,
-      sort: <>Sorte</>,
-      sortValue: (
-        <>Raffiniertes, desodoriertes, winterfestes Sonnenblumenöl Marke „P“</>
-      ),
-      clarity: <>Klarheit</>,
-      clarityValue: <>Transparent, ohne Sediment</>,
-      flavor: <>Geschmack</>,
-      flavorValue: <>Unpersönlich zu schmecken und zu riechen</>,
-      colorValue: <>Farbwert, mg Jod</>,
-      acid: <>Säurezahl, mg KOH/g</>,
-      none: <>keine</>,
-      phosphorus: (
-        <>Phosphorhaltige Substanzen umgerechnet nach Stearolecitiny, %</>
-      ),
-      mixtures: <>Nicht-Öl-Beimischungen</>,
-      moistureVolatile: <>Feuchtigkeit und flüchtige Stoffe, %</>,
-      peroxide: <>Peroxidzahl, 1/2 P mmol/kg</>,
-      shelfLife: <>Haltbarkeit</>,
-      months: <>Monate</>,
-      purpose: <>Produktzweck</>,
-      purposeValue: <>für Lebensmittel</>,
-      energy: <>Energiewert (Kaloriengehalt) von 100 g des Produkts</>,
-      energyValue: <>899 kcal (3761 kJ)</>,
-      nutritional: <>Nährwert (Lebensmittel) von 100 g des Produkts</>,
-      nutritionalValue: <>Fett - 99,9 g.</>,
-      netWeight: <>Nettogewicht von 1 Liter</>,
-      netWeightValue: <>0,92 kg</>,
-    },
-    ua: {
-      grade: <>Сорт</>,
-      highest: <>вищий</>,
-      first: <>перший</>,
-      color: <>Колір</>,
-      colorFlour: <>Білий або білий із жовтим відтінком</>,
-      colorBran: <>Червоно-жовтий із сируватим відтінком</>,
-      colorSemolina: <>Білий або з кремовим відтінком</>,
-      moisture: <>Вологість, %, не більше</>,
-      ash: <>Зольність у перерахунку на суху речовину, %, не менше</>,
-      gluten: <>Клейковина сира, %, не менше</>,
-      falling: <>Число падіння, %, не менше</>,
-      protein: <>Білок у перерахунку на суху речовину, %</>,
-      packaging: <>Фасування</>,
-      order: <>Мінімальне замовлення</>,
-      orderValue: <>від 20 тонн</>,
-      kg: <>кг</>,
-      sort: <>Сорт</>,
-      sortValue: (
-        <>
-          Рафинированное дезодорированное вымороженное подсолнечное масло марки
-          "П"
-        </>
-      ),
-      clarity: <>Прозорість</>,
-      clarityValue: <>прозорий продукт, без осаду</>,
-      flavor: <>Запах та смак</>,
-      flavorValue: <>без смаку та запаху</>,
-      colorValue: <>Світлота, мг йоду</>,
-      acid: <>Кислотне число, мг KOH/г</>,
-      none: <>ні</>,
-      phosphorus: (
-        <>
-          Масова частка фосфоровмісних речовин в перерахунку на
-          стеароолеолецитин, %
-        </>
-      ),
-      mixtures: <>Масова частка нежирових домішок</>,
-      moistureVolatile: <>Масова частка вологи та летких речовин</>,
-      peroxide: <>Перекисне число 1/2 О ммоль/кг</>,
-      shelfLife: <>Термін придатності починаючи з дати виробництва</>,
-      months: <>місяці</>,
-      purpose: <>Призначення продукту</>,
-      purposeValue: <>для їжі</>,
-      energy: <>Енергетична цінність (калорійність) у 100г продукту</>,
-      energyValue: <>899 ккал (3761 кДж)</>,
-      nutritional: <>Харчова цінність у 100г продукту</>,
-      nutritionalValue: <>Жири – 99,9 р.</>,
-      netWeight: <>Маса нетто 1 л.</>,
-      netWeightValue: <>0,92 кг</>,
-    },
-    ru: {
-      grade: <>Сорт</>,
-      highest: <>высший</>,
-      first: <>первый</>,
-      color: <>Цвет</>,
-      colorFlour: <>Белый или белый с желтым оттенком</>,
-      colorBran: <>Красно-желтый с сыроватым оттенком</>,
-      colorSemolina: <>Белый или с кремовым оттенком</>,
-      moisture: <>Влажность, %, не больше</>,
-      ash: <>Зольность в перерасчете на сухое вещество, %, не меньше</>,
-      gluten: <>Клейковина сырая, %, не меньше</>,
-      falling: <>Число падения, %, не меньше</>,
-      protein: <>Белок в перерасчёте на сухое вещество, %</>,
-      packaging: <>Фасовка</>,
-      order: <>Минимальный заказ</>,
-      orderValue: <>от 20 тонн</>,
-      kg: <>кг</>,
-      sort: <>Сорт</>,
-      sortValue: (
-        <>
-          Рафинированное дезодорированное вымороженное подсолнечное масло марки
-          "П"
-        </>
-      ),
-      clarity: <>Прозрачность</>,
-      clarityValue: <>прозрачный продукт, без осадка</>,
-      flavor: <>Привкус</>,
-      flavorValue: <>без вкуса и запаха</>,
-      colorValue: <>Светлота, мг йода</>,
-      acid: <>Кислотное число, мг KOH/г</>,
-      none: <>нет</>,
-      phosphorus: (
-        <>
-          Массовая доля фосфоросодержащих веществ в перерасчёте на
-          стеароолеолецитин, %
-        </>
-      ),
-      mixtures: <>Массовая доля нежировых примесей</>,
-      moistureVolatile: <>Массовая доля воды и летучих веществ</>,
-      peroxide: <>Перекисное число 1/2 О ммоль/кг</>,
-      shelfLife: <>Срок годности начиная с даты производства</>,
-      months: <>месяца</>,
-      purpose: <>Назначение продукта</>,
-      purposeValue: <>для еды</>,
-      energy: <>Энергетическая ценность (калорийность) в 100г продукта</>,
-      energyValue: <>899 ккал (3761 кДж)</>,
-      nutritional: <>Пищевая ценность в 100 г. продукта</>,
-      nutritionalValue: <>Жиры - 99,9 г.</>,
-      netWeight: <>Масса нетто 1 л.</>,
-      netWeightValue: <>0,92 кг</>,
-    },
-  };
-  /////
   const productDetails = [
     // Wheat flour
     {
@@ -306,7 +56,7 @@ export default function Products(props) {
               <td>{tableData[props.lang].protein}</td>
               <td colspan="2">11.50</td>
             </tr>
-
+  
             <tr>
               <td>{tableData[props.lang].packaging}</td>
               <td colspan="2">
@@ -428,8 +178,8 @@ export default function Products(props) {
           label: <>Sunflower oil</>,
           standard: (
             <>
-              Sunflower seed oil in accordance with the State Technical
-              Standard of Ukraine (DSTU)  4492-2017 .
+              Sunflower seed oil in accordance with the State Technical Standard
+              of Ukraine (DSTU) 4492-2017 .
             </>
           ),
           origin: <>Country of origin: Ukraine</>,
@@ -448,8 +198,8 @@ export default function Products(props) {
           label: <>Sonnenblumenöl</>,
           standard: (
             <>
-              Sonnenblumenöl laut dem Staatlichen Technischen Standart der Ukraine
-              (DSTU) 4492-2017
+              Sonnenblumenöl laut dem Staatlichen Technischen Standart der
+              Ukraine (DSTU) 4492-2017
             </>
           ),
           origin: <>Herkunftsland: die Ukraine.</>,
@@ -476,7 +226,8 @@ export default function Products(props) {
           ),
           toxic: (
             <>
-              Залишковий вміст токсичних елементів, пестицидів, афлатоксинів не перевищує норм МБТ.
+              Залишковий вміст токсичних елементів, пестицидів, афлатоксинів не
+              перевищує норм МБТ.
             </>
           ),
           gmo: <>Без ГМО</>,
@@ -485,12 +236,11 @@ export default function Products(props) {
           label: <>Подсолнечное масло</>,
           standard: <>Подсолнечное масло в соответствии с ДСТУ 4492-2017</>,
           origin: <>Страна происхождения сырья: Украина</>,
-          preserve: (
-            <>Хранить в темном месте при температуре от 8°C до 25°C.</>
-          ),
+          preserve: <>Хранить в темном месте при температуре от 8°C до 25°C.</>,
           toxic: (
             <>
-              Остаточное содержание точкисных элементов, пестицидов, афлатоксинов не превышает норм МБТ.
+              Остаточное содержание точкисных элементов, пестицидов,
+              афлатоксинов не превышает норм МБТ.
             </>
           ),
           gmo: <>Без ГМО</>,
@@ -520,7 +270,7 @@ export default function Products(props) {
               <td>{tableData[props.lang].gluten}</td>
               <td>9.0</td>
             </tr>
-
+  
             <tr>
               <td>{tableData[props.lang].packaging}</td>
               <td>
@@ -539,7 +289,8 @@ export default function Products(props) {
           label: <>Wheat bran</>,
           standard: (
             <>
-              Wheat bran in accordance with the State Technical Standard of Ukraine (DSTU) 3016-95.
+              Wheat bran in accordance with the State Technical Standard of
+              Ukraine (DSTU) 3016-95.
             </>
           ),
           origin: <>Country of origin: Ukraine</>,
@@ -548,7 +299,8 @@ export default function Products(props) {
           label: <>Weizenkleie</>,
           standard: (
             <>
-              Weizenkleie laut dem Staatlichen Technischen Standart der Ukraine (DSTU) 3016-95
+              Weizenkleie laut dem Staatlichen Technischen Standart der Ukraine
+              (DSTU) 3016-95
             </>
           ),
           origin: <>Herkunftsland: die Ukraine</>,
@@ -649,8 +401,8 @@ export default function Products(props) {
           label: <>Powdered milk</>,
           standard: (
             <>
-              Powdered milk in accordance with the State Technical
-              Standard of Ukraine (DSTU) 4556-2006.
+              Powdered milk in accordance with the State Technical Standard of
+              Ukraine (DSTU) 4556-2006.
             </>
           ),
           origin: <>Country of origin: Ukraine</>,
@@ -659,7 +411,8 @@ export default function Products(props) {
           label: <>Milchpulver</>,
           standard: (
             <>
-              Milchpulver dem Staatlichen Technischen Standart der Ukraine (DSTU) 4556-2006
+              Milchpulver dem Staatlichen Technischen Standart der Ukraine
+              (DSTU) 4556-2006
             </>
           ),
           origin: <>Herkunftsland: die Ukraine</>,
@@ -677,6 +430,25 @@ export default function Products(props) {
       },
     },
   ];
+  ////////
+  var [state, setState] = useState({ productDisplay: false });
+
+  const closeProduct = (e) => {
+    if (
+      e.target === document.getElementById("modalOverlay") &&
+      e.target !== document.getElementById("modalOrderForm")
+    ) {
+      setState({ productDisplay: false });
+    }
+  };
+
+  const xCloseProduct = () => {
+    setState({ productDisplay: false });
+  };
+
+ 
+  /////
+
 
   const products = [];
 
@@ -706,11 +478,8 @@ export default function Products(props) {
   });
 
   return (
-    <section className="production filled" id="our-production">
-      <div className="container">
-        <h2 className="section-title">{content[props.lang].productsTitle}</h2>
-        <div className="products">{products}</div>
-      </div>
+    <div className="component border" id="our-production">
+      <div className="products">{products}</div>
       {state.productDisplay ? (
         <ProductInfo
           lang={props.lang}
@@ -718,9 +487,8 @@ export default function Products(props) {
           xCloseProduct={xCloseProduct}
           productData={state.productData}
           openForm={props.openForm}
-          content={props.content}
         />
       ) : null}
-    </section>
+    </div>
   );
 }
