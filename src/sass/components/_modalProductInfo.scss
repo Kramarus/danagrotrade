@@ -106,8 +106,9 @@
 
 @media screen and (max-width: 800px) {
   .modalProductInfo {
+    max-height: 100vh!important;
+    overflow-y: auto;
     width: 360px;
-    overflow-y: scroll!important;
     .modal-body {
       flex-direction: column !important;
       .product-img {

@@ -10,6 +10,8 @@
   background: fade-out($dark-color, 0.3);
   z-index: 1000;
   .modalOrderForm {
+    max-height: 100vh;
+    overflow-y: auto;
     box-sizing: border-box;
     max-width: 480px;
     background-color: $primary-color;
