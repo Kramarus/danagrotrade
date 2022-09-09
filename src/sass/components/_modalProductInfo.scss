@@ -84,7 +84,8 @@
 
         table {
           width: 100%;
-          th, td {
+          th,
+          td {
             border: 1px solid $light-color;
             padding: 8px 16px;
           }
@@ -98,6 +99,27 @@
         color: $light-color;
         background-color: $secondary-color;
         margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .modalProductInfo {
+    width: 360px;
+    overflow-y: scroll!important;
+    .modal-body {
+      flex-direction: column !important;
+      .product-img {
+        width: 100%!important;
+        height: 214px!important;
+        border-radius: 15px!important;
+        &:hover {
+          overflow: hidden;
+        }
+      }
+      .modal-table {
+        margin: 0!important;
       }
     }
   }

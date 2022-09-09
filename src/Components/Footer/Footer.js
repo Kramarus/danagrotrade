@@ -111,7 +111,7 @@ const content = {
       about: <>Про нас</>,
     },
     newsletter: {
-      title: <>Підписатися на оновлення</>,
+      title: <>Підписатися <br />на оновлення</>,
       email: "Ваш Email",
       button: "Підписатися",
     },
@@ -160,7 +160,7 @@ const content = {
       about: <>О нас</>,
     },
     newsletter: {
-      title: <>Подписаться на обновления</>,
+      title: <>Подписаться <br />на обновления</>,
       email: "Ваш Email",
       button: "Подписаться",
     },
