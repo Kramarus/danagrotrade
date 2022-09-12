@@ -38,7 +38,7 @@ function Footer(props) {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#about">{contentFooter[props.lang].links.about}</Link>
+                  <Link to="/#/en/orderform">{contentFooter[props.lang].links.about}</Link>
                 </li>
               </ul>
             </div>

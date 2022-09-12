@@ -18,7 +18,7 @@
     border-radius: 16px;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 16px!important;
     color: $dark-color;
     .modal-header {
       border-bottom: 1px solid $secondary-color;
@@ -32,7 +32,7 @@
         cursor: pointer;
         svg {
           height: 32px;
-          width: 100px;
+          width: 32px;
           &:hover {
             transform: scale(1.1);
             transition: transform 0.5s;
@@ -88,6 +88,7 @@
           td {
             border: 1px solid $light-color;
             padding: 8px 16px;
+            font-size: 16px;
           }
         }
       }
@@ -107,10 +108,10 @@
 @media screen and (max-width: 800px) {
   .modalProductInfo {
     max-height: 100vh!important;
-    overflow-y: auto;
     width: 360px;
     .modal-body {
       flex-direction: column !important;
+      overflow-y: scroll!important;
       .product-img {
         width: 100%!important;
         height: 214px!important;
@@ -119,8 +120,23 @@
           overflow: hidden;
         }
       }
+      .product-desc {
+        p {
+          font-size: 12px!important;
+        }
+      }
       .modal-table {
         margin: 0!important;
+        // overflow-y: scroll!important;
+        table {
+          width: 100%;
+          th,
+          td {
+            border: 1px solid $light-color;
+            padding: 4px!important;
+            font-size: 12px!important;
+          }
+        }
       }
     }
   }

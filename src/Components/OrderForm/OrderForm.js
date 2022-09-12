@@ -110,7 +110,7 @@ export default function OrderForm(props) {
               required
             />
           </div>
-          <div className="form-query">
+          {/* <div className="form-query">
             <label for="phoneNumber" className="form-label">
               {contentOrder[props.lang].phone}
             </label>
@@ -120,7 +120,7 @@ export default function OrderForm(props) {
               name="phone"
               id="phoneNumber"
             />
-          </div>
+          </div> */}
           {/* Product */}
           <div className="form-row">
             <div className="form-query form-product">

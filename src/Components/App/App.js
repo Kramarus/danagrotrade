@@ -2,6 +2,7 @@ import React from "react";
 import { HashRouter, Routes, Route, useNavigate } from "react-router-dom";
 
 import Landing from "../Landing/Landing";
+import OrderForm from "../OrderForm/OrderForm";
 import Thankyou from "../Thankyou/Thankyou";
 
 export default function App(props) {
@@ -10,7 +11,10 @@ export default function App(props) {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Landing lang="en" />} />
+        <Route path="/" element={<Landing lang="en" />} >
+          <Route path="/de/orderform" element={<OrderForm lang="de" />} />
+        </Route>
+
         <Route path="/en" element={<Landing lang="en" />} />
         <Route path="/de" element={<Landing lang="de" />} />
         <Route path="/ua" element={<Landing lang="ua" />} />

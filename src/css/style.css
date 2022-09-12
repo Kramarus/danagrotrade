@@ -170,7 +170,7 @@ p {
     border-radius: 16px;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 16px !important;
     color: black; }
     .modalOverlay .modalProductInfo .modal-header {
       border-bottom: 1px solid #62a901;
@@ -184,7 +184,7 @@ p {
         cursor: pointer; }
         .modalOverlay .modalProductInfo .modal-header .x-btn svg {
           height: 32px;
-          width: 100px; }
+          width: 32px; }
           .modalOverlay .modalProductInfo .modal-header .x-btn svg:hover {
             transform: scale(1.1);
             transition: transform 0.5s; }
@@ -226,7 +226,8 @@ p {
           .modalOverlay .modalProductInfo .modal-body .modal-table table th,
           .modalOverlay .modalProductInfo .modal-body .modal-table table td {
             border: 1px solid #f2f2f2;
-            padding: 8px 16px; }
+            padding: 8px 16px;
+            font-size: 16px; }
     .modalOverlay .modalProductInfo .modal-footer {
       display: flex;
       flex-direction: row-reverse; }
@@ -238,18 +239,27 @@ p {
 @media screen and (max-width: 800px) {
   .modalProductInfo {
     max-height: 100vh !important;
-    overflow-y: auto;
     width: 360px; }
     .modalProductInfo .modal-body {
-      flex-direction: column !important; }
+      flex-direction: column !important;
+      overflow-y: scroll !important; }
       .modalProductInfo .modal-body .product-img {
         width: 100% !important;
         height: 214px !important;
         border-radius: 15px !important; }
         .modalProductInfo .modal-body .product-img:hover {
           overflow: hidden; }
+      .modalProductInfo .modal-body .product-desc p {
+        font-size: 12px !important; }
       .modalProductInfo .modal-body .modal-table {
-        margin: 0 !important; } }
+        margin: 0 !important; }
+        .modalProductInfo .modal-body .modal-table table {
+          width: 100%; }
+          .modalProductInfo .modal-body .modal-table table th,
+          .modalProductInfo .modal-body .modal-table table td {
+            border: 1px solid #f2f2f2;
+            padding: 4px !important;
+            font-size: 12px !important; } }
 .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-submit, .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-close {
   padding: 16px 32px;
   font-size: 24px;
@@ -375,7 +385,8 @@ div.component div.logo-row {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  flex-shrink: 1; }
+  flex-shrink: 1;
+  width: 100%; }
   .component .products .product {
     box-sizing: border-box;
     max-width: 100%;
@@ -383,7 +394,8 @@ div.component div.logo-row {
     text-align: center;
     padding: 16px; }
     .component .products .product .product-img {
-      width: 100%;
+      width: 300px;
+      height: 200px;
       margin: auto;
       height: calc(300px * 2/3);
       border-radius: 15px;
@@ -607,7 +619,7 @@ main.hero .hero-banner {
     color: #f2f2f2; }
     main.hero .hero-banner .hero-content .cta-group {
       display: flex;
-      width: 400px;
+      width: 500px;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between; }
