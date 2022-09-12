@@ -730,12 +730,20 @@ main.hero .hero-banner {
   .hero-content {
     width: 100% !important; } }
 @media screen and (max-width: 400px) {
+  .component {
+    width: 100%; }
+
+  .container {
+    padding: 0 !important; }
+
   .hero .hero-banner {
-    margin: 0 16px; }
+    margin: 0 !important;
+    box-sizing: border-box;
+    width: 100% !important; }
   .hero h1 {
-    font-size: 32px; }
+    font-size: 24px; }
   .hero h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin: 16px auto !important; }
   .hero .cta-group {
     flex-direction: column !important;
@@ -743,9 +751,13 @@ main.hero .hero-banner {
     .hero .cta-group .cta {
       margin: 8px auto; }
   .hero .hero-features {
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
     .hero .hero-features .hero-feature {
-      margin: 8px auto; } }
+      margin: 8px auto;
+      width: 100%; }
+      .hero .hero-features .hero-feature p {
+        font-size: 12px; } }
 .background-image {
   color: #f2f2f2;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg1.jpg");
