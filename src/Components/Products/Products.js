@@ -478,7 +478,7 @@ export default function Products(props) {
   });
 
   return (
-    <div className="component border" id="our-production">
+    <div className="component" id="our-production">
       <div className="products">{products}</div>
       {state.productDisplay ? (
         <ProductInfo

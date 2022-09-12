@@ -22,13 +22,14 @@
 html {
   scroll-behavior: smooth;
   body {
+    width: 100%;
     .container {
       box-sizing: border-box;
       max-width: 1280px;
       margin: auto;
       display: flex;
       flex-direction: column;
-      background-color: rgba($color: #ff033e, $alpha: 0.1);
+      // background-color: rgba($color: #ff033e, $alpha: 0.1);
       h2.section-title {
         text-transform: uppercase;
         padding: 32px 0;
@@ -38,7 +39,7 @@ html {
         }
       }
       .component {
-        border: 2px dashed grey !important;
+        // border: 2px dashed grey !important;
       }
     }
     section {
