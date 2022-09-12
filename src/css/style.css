@@ -429,7 +429,7 @@ div.component div.logo-row {
   .advantages-row > div {
     flex: 1; }
   .advantages-row .advantage {
-    padding: 48px; }
+    padding: 40px; }
     .advantages-row .advantage .img-container {
       display: flex;
       flex-direction: column;
@@ -572,6 +572,9 @@ footer .container {
 @media screen and (max-width: 989px) {
   .footer-grid {
     grid-template-columns: repeat(1, 1fr) !important; } }
+@media screen and (max-width: 400px) {
+  .footer-grid {
+    margin: 0 !important; } }
 main.hero .hero-banner {
   display: flex;
   justify-content: space-between; }
@@ -581,60 +584,67 @@ main.hero .hero-banner {
     color: #f2f2f2; }
     main.hero .hero-banner .hero-content .cta-group {
       display: flex;
-      flex-direction: row; }
-      main.hero .hero-banner .hero-content .cta-group .cta-primary {
-        margin-right: 16px; }
+      width: 400px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between; }
   main.hero .hero-banner .hero-features {
     display: flex; }
 
-@media screen and (min-width: 1313px) {
-  .hero-banner {
-    flex-direction: row;
-    margin: 32px 0; }
-    .hero-banner .hero-content {
-      width: 720px;
-      align-items: flex-start;
-      justify-content: space-around; }
-    .hero-banner .hero-features {
-      flex-direction: column;
+.hero-banner {
+  flex-direction: row;
+  margin: 160px 0; }
+  .hero-banner .hero-content {
+    width: 680px;
+    align-items: flex-start;
+    justify-content: space-around; }
+  .hero-banner .hero-features {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    .hero-banner .hero-features .hero-feature {
+      display: flex;
+      flex-direction: row;
       justify-content: space-between;
-      align-items: center; }
-      .hero-banner .hero-features .hero-feature {
+      margin: 16px 0;
+      box-sizing: border-box; }
+      .hero-banner .hero-features .hero-feature .hero-feature-img {
+        width: 64px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 16px 0;
-        box-sizing: border-box; }
-        .hero-banner .hero-features .hero-feature .hero-feature-img {
-          width: 64px;
-          display: flex;
-          align-items: center; }
-          .hero-banner .hero-features .hero-feature .hero-feature-img img {
-            width: 100%;
-            height: 100%; }
-            .hero-banner .hero-features .hero-feature .hero-feature-img img:hover {
-              transform: scale(1.1);
-              transition: transform 0.5s; }
-        .hero-banner .hero-features .hero-feature .hero-feature-content {
-          width: 320px;
-          color: #f2f2f2;
-          margin: 10px 0;
-          display: flex;
-          align-items: center; }
-          .hero-banner .hero-features .hero-feature .hero-feature-content p {
-            font-size: 20px;
-            margin: auto 16px; } }
-@media screen and (max-width: 1312px) {
+        align-items: center; }
+        .hero-banner .hero-features .hero-feature .hero-feature-img img {
+          width: 100%;
+          height: 100%; }
+          .hero-banner .hero-features .hero-feature .hero-feature-img img:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s; }
+      .hero-banner .hero-features .hero-feature .hero-feature-content {
+        width: 280px;
+        color: #f2f2f2;
+        margin: 10px 0;
+        display: flex;
+        align-items: center; }
+        .hero-banner .hero-features .hero-feature .hero-feature-content p {
+          font-size: 20px;
+          margin: auto 16px; }
+
+@media screen and (max-width: 1050px) {
   .hero-banner {
     flex-direction: column;
     align-items: center;
-    margin: 160px auto; }
+    margin: 64px auto; }
     .hero-banner .hero-content {
-      width: 720px; }
+      width: 680px;
+      text-align: center;
+      align-items: center; }
+      .hero-banner .hero-content h2 {
+        margin: 32px auto; }
     .hero-banner .hero-features {
       flex-direction: row;
+      flex-wrap: wrap;
       max-width: auto;
-      margin: 16px auto; }
+      margin: 16px auto;
+      justify-content: center; }
       .hero-banner .hero-features .hero-feature {
         display: flex;
         flex-direction: row;
@@ -652,7 +662,7 @@ main.hero .hero-banner {
               transform: scale(1.1);
               transition: transform 0.5s; }
         .hero-banner .hero-features .hero-feature .hero-feature-content {
-          width: 320px;
+          width: 280px;
           color: #f2f2f2;
           margin: 10px 0;
           display: flex;
@@ -716,6 +726,26 @@ main.hero .hero-banner {
         section.hero .hero-feature .hero-feature-content p {
           font-size: 16px !important;
           margin: auto 16px; } }
+@media screen and (max-width: 719px) {
+  .hero-content {
+    width: 100% !important; } }
+@media screen and (max-width: 400px) {
+  .hero .hero-banner {
+    margin: 0 16px; }
+  .hero h1 {
+    font-size: 32px; }
+  .hero h2 {
+    font-size: 24px;
+    margin: 16px auto !important; }
+  .hero .cta-group {
+    flex-direction: column !important;
+    width: 100% !important; }
+    .hero .cta-group .cta {
+      margin: 8px auto; }
+  .hero .hero-features {
+    margin: 0 auto; }
+    .hero .hero-features .hero-feature {
+      margin: 8px auto; } }
 .background-image {
   color: #f2f2f2;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg1.jpg");
@@ -726,6 +756,11 @@ main.hero .hero-banner {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-repeat: no-repeat; }
+
+.company-info {
+  margin: 16px; }
+  .company-info p {
+    line-height: 1.4; }
 
 html {
   scroll-behavior: smooth; }
@@ -772,6 +807,17 @@ html {
       padding: 32px 0;
       margin: 0;
       text-align: center; }
+      section h2.section-title span {
+        color: #62a901; } }
+@media screen and (max-width: 1050px) {
+  section {
+    padding-bottom: 32px; }
+    section h2.section-title {
+      text-transform: uppercase;
+      padding: 32px 0;
+      margin: 0;
+      text-align: center;
+      width: auto; }
       section h2.section-title span {
         color: #62a901; } }
 

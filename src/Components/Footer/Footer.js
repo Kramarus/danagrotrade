@@ -13,7 +13,6 @@ import content from "../../content/content";
 function Footer(props) {
   return (
     <footer className="component">
-      <div className="container">
         <div className="footer-grid">
           <div className="descriptor">
             <Descriptor lang={props.lang} />
@@ -86,7 +85,6 @@ function Footer(props) {
           </div>
         </div>
         <div className="copyright">{contentFooter[props.lang].copyright}</div>
-      </div>
     </footer>
   );
 }

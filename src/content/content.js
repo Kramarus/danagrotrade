@@ -24,7 +24,7 @@ const content = {
         <span>Our</span> company
       </>
     ),
-    heroTitle: <h1>Export of wheat flour with delivery all over Europe</h1>,
+    heroTitle: <h1>Export of wheat flour with delivery <br />all over Europe</h1>,
     heroSubtitle: <h2>All sorts and high quality standards directly from a Ukrainian manufacturer</h2>,
   },
   de: {

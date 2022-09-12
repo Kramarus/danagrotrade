@@ -9,10 +9,10 @@ main.hero {
       color: $light-color;
       .cta-group {
         display: flex;
+        width: 400px;
         flex-direction: row;
-        .cta-primary {
-          margin-right: 16px;
-        }
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
     }
     .hero-features {
@@ -22,13 +22,12 @@ main.hero {
 }
 
 ////////////////////////////////// Responsive
-
-@media screen and (min-width: 1313px) {
   .hero-banner {
     flex-direction: row;
-    margin: 32px 0;
+    margin: 160px 0;
+    
     .hero-content {
-      width: 720px;
+      width: 680px;
       align-items: flex-start;
       justify-content: space-around;
     }
@@ -56,7 +55,7 @@ main.hero {
           }
         }
         .hero-feature-content {
-          width: 320px;
+          width: 280px;
           color: $light-color;
           margin: 10px 0;
           display: flex;
@@ -69,20 +68,26 @@ main.hero {
       }
     }
   }
-}
 
-@media screen and (max-width: 1312px) {
+@media screen and (max-width: 1050px) {
   .hero-banner {
     flex-direction: column;
     align-items: center;
-    margin: 160px auto;
+    margin: 64px auto;
     .hero-content {
-      width: 720px;
+      width: 680px;
+      text-align: center;
+      align-items: center;
+      h2 {
+        margin: 32px auto;
+      }
     }
     .hero-features {
       flex-direction: row;
+      flex-wrap: wrap;
       max-width: auto;
       margin: 16px auto;
+      justify-content: center;
       .hero-feature {
         display: flex;
         flex-direction: row;
@@ -103,7 +108,7 @@ main.hero {
           }
         }
         .hero-feature-content {
-          width: 320px;
+          width: 280px;
           color: $light-color;
           margin: 10px 0;
           display: flex;
@@ -188,6 +193,41 @@ main.hero {
           font-size: 16px !important;
           margin: auto 16px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .hero-content {
+    width: 100%!important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero {
+    .hero-banner {
+      margin: 0 16px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 24px;
+      margin: 16px auto!important;
+    }
+    .cta-group {
+      flex-direction: column!important;
+      width: 100%!important;
+      .cta {
+        margin: 8px auto;
+      }
+    }
+
+    .hero-features {
+      margin: 0 auto;
+      .hero-feature {
+        margin: 8px auto;
       }
     }
   }

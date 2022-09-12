@@ -15,6 +15,7 @@
 @import "./components/footer";
 @import "./components/hero";
 @import "./design/background";
+@import "./components/company";
 
 // Global
 
@@ -87,6 +88,22 @@ html {
       padding: 32px 0;
       margin: 0;
       text-align: center;
+      span {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  section {
+    padding-bottom: 32px;
+    h2.section-title {
+      text-transform: uppercase;
+      padding: 32px 0;
+      margin: 0;
+      text-align: center;
+      width: auto;
       span {
         color: $secondary-color;
       }
