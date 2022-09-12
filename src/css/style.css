@@ -61,7 +61,7 @@ p {
     max-height: 100vh !important;
     overflow-y: auto;
     box-sizing: border-box;
-    max-width: 480px;
+    max-width: 360px;
     background-color: #f8bf01;
     z-index: 1500;
     opacity: 1;
@@ -105,9 +105,11 @@ p {
       .modalOverlay .modalOrderForm form .form-row {
         display: flex;
         flex-direction: row;
-        justify-content: space-between; }
+        justify-content: space-between;
+        width: 100%; }
         .modalOverlay .modalOrderForm form .form-row .form-product {
-          margin-right: 16px; }
+          margin-right: 16px;
+          width: 180px; }
         .modalOverlay .modalOrderForm form .form-row .form-volume {
           width: 120px; }
       .modalOverlay .modalOrderForm form .form-query {
@@ -120,8 +122,6 @@ p {
           border: 1px dotted #f2f2f2;
           border-radius: 8px;
           padding: 8px; }
-        .modalOverlay .modalOrderForm form .form-query select {
-          min-width: 240px; }
       .modalOverlay .modalOrderForm form .form-label {
         font-size: 16px;
         padding: 8px 0; }
@@ -130,6 +130,8 @@ p {
         flex-direction: row;
         justify-content: flex-end;
         margin: 16px 0; }
+        .modalOverlay .modalOrderForm form .form-buttons-row button {
+          font-size: 16px !important; }
         .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-submit {
           background-color: #62a901;
           color: #f2f2f2;
@@ -141,12 +143,6 @@ p {
           color: #f2f2f2;
           background-color: #E52B50; }
 
-@media screen and (max-width: 800px) {
-  .modalOrderForm {
-    width: 360px; }
-
-  .form-row {
-    flex-direction: column !important; } }
 .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-submit, .modalOverlay .modalOrderForm form .form-buttons-row .cta-form-close {
   padding: 16px 32px;
   font-size: 24px;

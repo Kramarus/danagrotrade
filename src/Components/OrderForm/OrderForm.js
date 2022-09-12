@@ -128,7 +128,7 @@ export default function OrderForm(props) {
                 {contentOrder[props.lang].product.label}
               </label>
 
-              <select className="form-select mb-3" id="product" name="product">
+              <select className="form-select" id="product" name="product">
                 <option selected>{contentOrder[props.lang].product.choose}</option>
                 <option value={contentOrder[props.lang].product.flour}>
                   {contentOrder[props.lang].product.flour}
@@ -157,27 +157,6 @@ export default function OrderForm(props) {
               />
             </div>
           </div>
-          <div className="form-query">
-            <label for="custom-label" className="form-label">
-              {contentOrder[props.lang].customLabel.question}
-              <input
-                type="radio"
-                id="label-no"
-                name="label"
-                value={contentOrder[props.lang].customLabel.no}
-              />
-              <label for="label-no">{contentOrder[props.lang].no}</label>
-              <input
-                type="radio"
-                id="label-yes"
-                name="label"
-                value={contentOrder[props.lang].customLabel.yes}
-              />
-              <label for="label-yes">
-                {contentOrder[props.lang].yes}
-              </label>
-            </label>
-          </div>
           {/* Commentary */}
           <div className="form-query">
             <label for="comments" className="form-label">
@@ -203,7 +182,7 @@ export default function OrderForm(props) {
             <button type="submit" className="cta-form-submit" onClick={validateForm}>
               {contentOrder[props.lang].submitBtn}
             </button>
-            <button type="submit" className="cta-form-close" onClick={props.xCloseForm}>
+            <button className="cta-form-close" onClick={props.xCloseForm}>
               {contentOrder[props.lang].backBtn}
             </button>
           </div>
