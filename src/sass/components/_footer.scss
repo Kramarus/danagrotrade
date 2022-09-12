@@ -1,4 +1,7 @@
 footer {
+  .component {
+    margin: 0;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -33,6 +36,9 @@ footer {
         }
         .logo-row {
           margin-bottom: 16px;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
         }
       }
       .footer-links {
@@ -164,11 +170,25 @@ footer {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .footer-grid {
-    margin: 0!important;
+    margin: 0 !important;
     & > div {
-   
+      min-width: 100%;
+      box-sizing: border-box;
     }
+    .logo-row {
+      display: flex;
+      flex-wrap: wrap!important;
+      .logo-descriptor {
+        margin: 0!important;
+        display: flex;
+        justify-content: center;
+        p {
+          max-width: 100%;
+        }
+      }
+    }
+
   }
 }

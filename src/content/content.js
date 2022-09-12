@@ -24,8 +24,8 @@ const content = {
         <span>Our</span> company
       </>
     ),
-    heroTitle: <h1>Export of wheat flour with delivery <br />all over Europe</h1>,
-    heroSubtitle: <h2>All sorts and high quality standards directly from a Ukrainian manufacturer</h2>,
+    heroTitle: <>Export of wheat flour with delivery <br />all over Europe</>,
+    heroSubtitle: <>All sorts and high quality standards directly from a Ukrainian manufacturer</>,
   },
   de: {
     descriptor: (
@@ -52,8 +52,8 @@ const content = {
         <span>Unsere</span> Firma
       </>
     ),
-    heroTitle: <h1>Export von Weizenmehl mit Lieferung in ganz Europa</h1>,
-    heroSubtitle: <h2>Alle Sorten und hohe Qualitätsstandards direkt vom ukrainischen Hersteller</h2>,
+    heroTitle: <>Export von Weizenmehl mit Lieferung in ganz Europa</>,
+    heroSubtitle: <>Alle Sorten und hohe Qualitätsstandards direkt vom ukrainischen Hersteller</>,
  
   },
   it: {
@@ -103,8 +103,8 @@ const content = {
         <span>Наша</span> компанія
       </>
     ),
-    heroTitle: <h1>Експорт пшеничного борошна з доставкою в Європі</h1>,
-    heroSubtitle: <h2>Усі види та високі стандарти якості безпосередньо від українського виробника</h2>,
+    heroTitle: <>Експорт пшеничного борошна з доставкою в Європі</>,
+    heroSubtitle: <>Усі види та високі стандарти якості безпосередньо від українського виробника</>,
  
   },
   ru: {
@@ -132,8 +132,8 @@ const content = {
         <span>Наша</span> компания
       </>
     ),
-    heroTitle: <h1>Экспорт пшеничной муки с доставкой по Европе</h1>,
-    heroSubtitle: <h2>Все виды и высокие стандарты качества напрямую от украинского производителя</h2>,
+    heroTitle: <>Экспорт пшеничной муки с доставкой по Европе</>,
+    heroSubtitle: <>Все виды и высокие стандарты качества напрямую от украинского производителя</>,
   },
 };
 

@@ -6,7 +6,9 @@
       flex: 1;
     }
     .advantage {
-      padding: 40px;
+      box-sizing: border-box;
+      min-width: 300px;
+      padding: 32px;
       .img-container {
         display: flex;
         flex-direction: column;
@@ -26,5 +28,11 @@
         text-align: start;
         font-size: 16px;
       }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .advantage {
+      min-width: 100%!important;
     }
   }

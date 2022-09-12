@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react";
 
 import shipped from "./img/shipped.png";
 import packaging from "./img/package.png";
 import twenty from "./img/twenty.png";
 
-import contentFeatures from '../../content/contentFeatures';
-
+import contentFeatures from "../../content/contentFeatures";
 
 export default function Features(props) {
-
   const featuresData = [
     {
       src: shipped,
@@ -31,15 +29,15 @@ export default function Features(props) {
   featuresData.forEach((e) => {
     features.push(
       <div className="hero-feature">
-        <div className="hero-feature-img">
-          <img src={e.src} alt={e.alt} />
+        <div className="hero-feature-content">
+          <div className="hero-feature-img">
+            <img src={e.src} alt={e.alt} />
+          </div>
+          <div className="hero-feature-text">{e.desc}</div>
         </div>
-        <div className="hero-feature-content">{e.desc}</div>
       </div>
     );
   });
 
-  return (
-    <div className="component hero-features">{features}</div>
-  )
+  return <div className="component hero-features">{features}</div>;
 }

@@ -7,6 +7,7 @@ main.hero {
       display: flex;
       flex-direction: column;
       color: $light-color;
+      
       .cta-group {
         display: flex;
         width: 400px;
@@ -39,8 +40,12 @@ main.hero {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: 16px 0;
         box-sizing: border-box;
+        .hero-feature-content {
+          display: flex;
+          flex-direction: row;
+          width: auto;
+        }
         .hero-feature-img {
           width: 64px;
           display: flex;
@@ -54,7 +59,7 @@ main.hero {
             }
           }
         }
-        .hero-feature-content {
+        .hero-feature-text {
           width: 280px;
           color: $light-color;
           margin: 10px 0;
@@ -91,9 +96,12 @@ main.hero {
       .hero-feature {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         margin: 16px 0;
         box-sizing: border-box;
+        .hero-feature-content {
+
+        }
         .hero-feature-img {
           width: 64px;
           display: flex;
@@ -107,14 +115,14 @@ main.hero {
             }
           }
         }
-        .hero-feature-content {
-          width: 280px;
+        .hero-feature-text {
+          width: 230px;
           color: $light-color;
-          margin: 10px 0;
+          margin: 8px 0;
           display: flex;
           align-items: center;
           p {
-            font-size: 20px;
+            font-size: 16px;
             margin: auto 16px;
           }
         }
@@ -183,10 +191,10 @@ main.hero {
           }
         }
       }
-      .hero-feature-content {
+      .hero-feature-text {
         width: 240px;
         color: $light-color;
-        margin: 10px 0;
+        margin: 8px 0;
         display: flex;
         align-items: center;
         p {
@@ -204,7 +212,7 @@ main.hero {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .component {
     width: 100%;
   } 
@@ -216,6 +224,10 @@ main.hero {
       margin: 0!important;
       box-sizing: border-box;
       width: 100%!important;
+      .hero-content {
+        padding: 32px;
+        box-sizing: border-box;
+      }
     }
     h1 {
       font-size: 24px;
@@ -238,8 +250,16 @@ main.hero {
       .hero-feature {
         margin: 8px auto;
         width: 100%;
+        justify-content: center;
+        .hero-feature-content {
+          width: fit-content;
+          .hero-feature-text {
+            width: fit-content;
+          }
+        }
         p {
-          font-size: 12px;
+          font-size: 12px!important;
+          width: 146px;
         }
       }
     }

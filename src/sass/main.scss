@@ -23,6 +23,7 @@ html {
   scroll-behavior: smooth;
   body {
     width: 100%;
+    overflow-x: hidden;
     .container {
       box-sizing: border-box;
       max-width: 1280px;
@@ -41,6 +42,9 @@ html {
       .component {
         // border: 2px dashed grey !important;
       }
+    }
+    .container-order {
+      padding: 32px auto;
     }
     section {
       &.filled {
@@ -97,6 +101,9 @@ html {
 }
 
 @media screen and (max-width: 1050px) {
+  .container {
+    padding: 0!important;
+  }
   section {
     padding-bottom: 32px;
     h2.section-title {
@@ -109,5 +116,12 @@ html {
         color: $secondary-color;
       }
     }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h2.section-title {
+    font-size: 24px;
+    padding: 16px 0;
   }
 }
