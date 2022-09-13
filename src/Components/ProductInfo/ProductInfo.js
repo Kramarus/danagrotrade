@@ -53,7 +53,7 @@ export default function ProductInfo(props) {
               <p>{props.productData.productInfo[props.lang].gmo}</p>
             </div>
           </div>
-          <div className="modal-table">{props.productData.table}</div>
+          <div className="modal-table"><div>{props.productData.table}</div></div>
         </div>
         <div className="modal-footer">
           <a className="cta cta-primary" onClick={handleClick}>{content[props.lang].ctaPrimary}</a>

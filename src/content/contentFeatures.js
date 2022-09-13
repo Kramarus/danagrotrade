@@ -1,16 +1,16 @@
 const contentFeatures = {
     en: {
       features: {
-        first: <p>Safe delivery from Slovakia <br />to any location in Europe</p>,
-        second: <p>A custom package<br />with your label</p>,
-        third: <p>Minimal order: 20 tons</p>,
+        first: <>Safe delivery from Slovakia <br />to any location in Europe</>,
+        second: <>A custom package<br />with your label</>,
+        third: <>Minimal order: 20 tons</>,
       },
     },
     de: {
       features: {
-        first: <p>Sichere Lieferung aus der Slowakei an jeden Ort in Europa</p>,
-        second: <p>Individuelle Verpackung<br />mit Ihrem Etikett</p>,
-        third: <p>Minimale Bestellung: <br />20 Tonnen</p>,
+        first: <>Sichere Lieferung aus der Slowakei an jeden Ort in Europa</>,
+        second: <>Individuelle Verpackung<br />mit Ihrem Etikett</>,
+        third: <>Minimale Bestellung: <br />20 Tonnen</>,
       },
     },
     it: {
@@ -29,16 +29,16 @@ const contentFeatures = {
     },
     ua: {
       features: {
-        first: <p>Надійна доставка зі Словаччини <br />в будь-яку точку Європи.</p>,
-        second: <p>Індивідуальна упаковка<br />з Вашою етикеткою</p>,
-        third: <p>Мінімальне замовлення: 20 тонн</p>,
+        first: <>Надійна доставка зі Словаччини <br />в будь-яку точку Європи.</>,
+        second: <>Індивідуальна упаковка<br />з Вашою етикеткою</>,
+        third: <>Мінімальне замовлення: 20 тонн</>,
       },
     },
     ru: {
       features: {
-        first: <p>Надёжная доставка из  Словакии <br />в любую точку Европы</p>,
-        second: <p>Индивидуальная упаковка<br />с Вашей этикеткой</p>,
-        third: <p>Минимальный заказ: 20 тонн</p>,
+        first: <>Надёжная доставка из  Словакии <br />в любую точку Европы</>,
+        second: <>Индивидуальная упаковка<br />с Вашей этикеткой</>,
+        third: <>Минимальный заказ: 20 тонн</>,
       },
     },
   }

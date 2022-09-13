@@ -1,9 +1,9 @@
 const content = {
   en: {
+    companyName: <>Dan Agro Trade</>,
     descriptor: (
       <>
-        <span>Dan Agro Trade</span>
-        <br />a wholesale supplier 
+        a wholesale supplier 
         <br />of food products
       </>
     ),
@@ -25,14 +25,13 @@ const content = {
       </>
     ),
     heroTitle: <>Export of wheat flour with delivery <br />all over Europe</>,
-    heroSubtitle: <>All sorts and high quality standards directly from a Ukrainian manufacturer</>,
+    heroSubtitle: <>All sorts and high quality standards <br />directly from a Ukrainian manufacturer</>,
   },
   de: {
+    companyName: <>Dan Agro Trade</>,
     descriptor: (
       <>
-        <span>Dan Agro Trade</span>
-        <br />
-        Großhandelslieferant für Lebensmittelprodukte
+        Großhandelslieferant <br />für Lebensmittelprodukte
       </>
     ),
     ctaPrimary: <>Preis anfragen</>,
@@ -53,14 +52,13 @@ const content = {
       </>
     ),
     heroTitle: <>Export von Weizenmehl mit Lieferung in ganz Europa</>,
-    heroSubtitle: <>Alle Sorten und hohe Qualitätsstandards direkt vom ukrainischen Hersteller</>,
+    heroSubtitle: <>Alle Sorten und hohe Qualitätsstandards <br />direkt vom ukrainischen Hersteller</>,
  
   },
   it: {
+    companyName: <>Dan Agro Trade</>,
     destiptor: (
       <>
-        <span>Dan Agro Trade</span>
-        <br />
         un fornitore all'ingrosso <br />di prodotti alimentari
       </>
     ),
@@ -68,10 +66,9 @@ const content = {
     ctaSecondary: <>Scopri di più</>,
   },
   pl: {
+    companyName: <>Dan Agro Trade</>,
     destiptor: (
       <>
-        <span>Dan Agro Trade</span>
-        <br />
         dostawca hurtowy <br />produktów spożywczych
       </>
     ),
@@ -79,10 +76,9 @@ const content = {
     ctaSecondary: <>Dowiedz się więcej</>,
   },
   ua: {
+    companyName: <>Дан Агро Трейд</>,
     descriptor: (
       <>
-        <span>Дан Агро Трейд</span>
-        <br />
         оптовий постачальник <br />харчових продуктів
       </>
     ),
@@ -108,10 +104,9 @@ const content = {
  
   },
   ru: {
+    companyName: <>Дан Агро Трейд</>,
     descriptor: (
       <>
-        <span>Дан Агро Трейд</span>
-        <br />
         оптовый поставщик <br />пищевых продуктов
       </>
     ),

@@ -108,11 +108,11 @@
 
 @media screen and (max-width: 800px) {
   .modalProductInfo {
-    max-height: 100vh!important;
     width: 360px;
     .modal-body {
       flex-direction: column !important;
-      overflow-y: scroll!important;
+      overflow: scroll!important;
+      // overflow-y: scroll!important;
       .product-img {
         width: 100%!important;
         height: 214px!important;
@@ -128,7 +128,6 @@
       }
       .modal-table {
         margin: 0!important;
-        // overflow-y: scroll!important;
         table {
           width: 100%;
           th,

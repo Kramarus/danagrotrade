@@ -33,7 +33,7 @@ export default function Features(props) {
           <div className="hero-feature-img">
             <img src={e.src} alt={e.alt} />
           </div>
-          <div className="hero-feature-text">{e.desc}</div>
+          <div className="hero-feature-text"><p>{e.desc}</p></div>
         </div>
       </div>
     );
