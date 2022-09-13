@@ -14,16 +14,16 @@ function Navbar(props) {
           <form>
             <select onChange={props.changeLang}>
               <option value="en" selected={props.lang == "en" ? true : false}>
-                English
+                EN
               </option>
               <option value="de" selected={props.lang == "de" ? true : false}>
-                Deutsch
+                DE
               </option>
               <option value="ua" selected={props.lang == "ua" ? true : false}>
-                Українська
+                UA
               </option>
               <option value="ru" selected={props.lang == "ru" ? true : false}>
-                Русский
+                RU
               </option>
             </select>
           </form>

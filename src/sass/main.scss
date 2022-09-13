@@ -1,6 +1,8 @@
 @import "./helpers/variables";
 @import "./helpers/mixins";
 
+@import "./layout/technical";
+
 @import "./design/typography";
 @import "./design/colors";
 
@@ -11,39 +13,82 @@
 
 @import "./design/background";
 
-.component {
-  border: 2px dashed gray;
-}
+// Global
 
-.container {
-  box-sizing: border-box;
-}
-
-h2.section-title {
-  @include screen-max(1080px) {
-    text-align: center;
+html {
+  scroll-behavior: smooth;
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    .container {
+      box-sizing: border-box;
+      max-width: 1280px;
+      margin: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      // background-color: rgba($color: #ff033e, $alpha: 0.1);
+      @include screen-max (492px) {
+        padding: 0;
+      }
+      h2.section-title {
+        text-transform: uppercase;
+        padding: 32px 0;
+        margin: 0;
+        @include screen-max(1080px) {
+          text-align: center;
+        }
+        span {
+          color: $secondary-color;
+        }
+      }
+      .component {
+        // border: 2px dashed grey !important;
+      }
+    }
+    .container-order {
+      padding: 32px auto;
+    }
+    section {
+      &.filled {
+        background-color: $primary-color;
+        color: $dark-color;
+      }
+    }
+    .bg-yellow {
+      background-color: $primary-color;
+    }
+    .text-green {
+      color: $secondary-color;
+    }
+    .border {
+      border: 1px solid $light-color;
+    }
+    .bordered > div {
+      border: 1px solid $light-color;
+    }
   }
 }
+
+///////////////////////////////////////////////////////////////////////////////////// Main content
 
 .landing {
   .navbar {
     height: 15vh;
-    @include screen-max (492px) {
-      height: 20vh;
-    }
     .component {
       display: flex;
       flex-direction: row;
-      @include screen-max (492px) {
-        flex-direction: column;
-        align-items: center;
-      }
+      justify-content: space-between;
+      align-items: center;
       .logo-row {
         min-width: 280px;
         display: flex;
         flex-direction: row;
         align-items: center;
         box-sizing: border-box;
+        @include screen-max (492px) {
+          margin: 16px 0;
+        }
         .logo-container {
           height: 64px;
           width: 64px;
@@ -69,7 +114,7 @@ h2.section-title {
             margin-left: 8px;
           }
           @include screen-max (492px) {
-            width: 240px;
+            width: 232px;
           }
           span {
             text-transform: uppercase;
@@ -101,9 +146,6 @@ h2.section-title {
   }
   .hero {
     height: 85vh;
-    @include screen-max (492px) {
-      height: 80vh;
-    }
     .hero-banner {
       display: flex;
       justify-content: space-between;
@@ -113,8 +155,8 @@ h2.section-title {
         flex-direction: column;
         margin: 64px 0;
       }
-      @include screen-max (450px) {
-        margin: 0;
+      @include screen-max (492px) {
+        margin: 32px 0;
       }
       .hero-content {
         display: flex;
@@ -140,9 +182,14 @@ h2.section-title {
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: space-between;
-          @include screen-max (450px) {
-            grid-template-columns: repeat(1, 1fr);
+          @include screen-max (492px) {
             gap: 16px;
+            margin: 32px auto;
+          }
+          .cta {
+            @include screen-max (492px) {
+              font-size: 20px;
+            }
           }
         }
       }
@@ -475,7 +522,7 @@ h2.section-title {
         .contact-box {
           display: flex;
           flex-direction: row;
-          justify-content: center;
+          justify-content: flex-start;
         }
       }
       .copyright {
@@ -486,59 +533,3 @@ h2.section-title {
   }
 }
 
-// Global
-
-html {
-  scroll-behavior: smooth;
-  body {
-    width: 100%;
-    overflow-x: hidden;
-    .container {
-      box-sizing: border-box;
-      max-width: 1280px;
-      margin: auto;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      // background-color: rgba($color: #ff033e, $alpha: 0.1);
-      h2.section-title {
-        text-transform: uppercase;
-        padding: 32px 0;
-        margin: 0;
-        span {
-          color: $secondary-color;
-        }
-      }
-      .component {
-        // border: 2px dashed grey !important;
-      }
-    }
-    .container-order {
-      padding: 32px auto;
-    }
-    section {
-      &.filled {
-        background-color: $primary-color;
-        color: $dark-color;
-      }
-    }
-    .bg-yellow {
-      background-color: $primary-color;
-    }
-    .text-green {
-      color: $secondary-color;
-    }
-    .border {
-      border: 1px solid $light-color;
-    }
-    .bordered > div {
-      border: 1px solid $light-color;
-    }
-  }
-}
-
-.navbar .component {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
