@@ -45,6 +45,7 @@ p {
 .cta {
   padding: 16px 18px;
   border-radius: 10px;
+  box-sizing: border-box;
   border: none;
   font-size: 18px;
   text-decoration: none; }
@@ -438,7 +439,7 @@ html {
           text-transform: uppercase;
           margin: 4px; }
         .landing .navbar .component .logo-row .logo-descriptor p {
-          margin: 4px auto; }
+          margin: 4px; }
     .landing .navbar .component .lang-selector {
       margin: 8px 16px; }
       .landing .navbar .component .lang-selector select {
@@ -499,7 +500,7 @@ html {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       flex-wrap: wrap; }
       @media (max-width: 880px) and (min-width: 800px) {
         .landing .hero .hero-banner .hero-features {
@@ -514,7 +515,7 @@ html {
         flex-direction: row;
         justify-content: space-between;
         box-sizing: border-box;
-        justify-content: flex-start; }
+        justify-content: center; }
         @media (max-width: 880px) and (min-width: 800px) {
           .landing .hero .hero-banner .hero-features .hero-feature:nth-child(2) .hero-feature-text p {
             width: 150px !important; } }
@@ -526,8 +527,7 @@ html {
             margin: 12px auto; } }
         .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content {
           display: flex;
-          flex-direction: row;
-          width: auto; }
+          flex-direction: row; }
           .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content .hero-feature-img {
             width: 64px;
             display: flex;
@@ -552,6 +552,9 @@ html {
               @media (max-width: 880px) and (min-width: 800px) {
                 .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content .hero-feature-text p {
                   width: 240px; } }
+              @media (max-width: 540px) {
+                .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content .hero-feature-text p {
+                  width: 190px; } }
 .landing .products {
   display: flex;
   grid-template-columns: repeat(3, 1fr);
