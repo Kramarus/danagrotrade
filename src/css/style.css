@@ -342,6 +342,7 @@ p {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg1.jpg");
   background-position: center;
   background-size: cover;
+  height: 100%;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -693,7 +694,7 @@ html {
             text-transform: uppercase;
             margin: 4px; }
           .landing footer .container .footer-grid .descriptor .logo-row .logo-descriptor p {
-            margin: 4px auto; }
+            margin: 4px; }
       .landing footer .container .footer-grid .descriptor button {
         margin: 16px auto; }
     .landing footer .container .footer-grid > div {
@@ -753,7 +754,7 @@ html {
           border-radius: 10px;
           margin: 8px 0; }
         .landing footer .container .footer-grid .newsletter .newsletter-box .newsletter-btn {
-          padding: 8px 16px;
+          padding: 16px;
           background-color: #f2f2f2;
           color: black;
           border: none;
