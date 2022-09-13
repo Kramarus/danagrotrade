@@ -4,24 +4,42 @@ body {
   
   h1 {
     font-size: 40px;
-    @include screen-max (700px) {
+    @include screen-max (1080px) {
       font-size: 32px;
+    }
+    @include screen-max (540px) {
+      font-size: 24px;
     }
   }
   
   h2 {
     font-size: 32px;
     margin: 8px 0;
-    @include screen-max (700px) {
-      font-size: 24px;
+    @include screen-max (1080px) {
+      font-size: 26px;
+    }
+    @include screen-max (540px) {
+      font-size: 20px;
     }
   }
   
   h3 {
     font-size: 24px;
+    @include screen-max (1080px) {
+      font-size: 20px;
+    }
+    @include screen-max (540px) {
+      font-size: 16px;
+    }
   }
   
   p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 8px 0;
+    @include screen-max (1080px) {
+      font-size: 14px;
+    }
+    @include screen-max (540px) {
+      font-size: 12px;
+    }
   }

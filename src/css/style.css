@@ -6,29 +6,47 @@ body {
 
 h1 {
   font-size: 40px; }
-  @media (max-width: 700px) {
+  @media (max-width: 1080px) {
     h1 {
       font-size: 32px; } }
+  @media (max-width: 540px) {
+    h1 {
+      font-size: 24px; } }
 
 h2 {
   font-size: 32px;
   margin: 8px 0; }
-  @media (max-width: 700px) {
+  @media (max-width: 1080px) {
     h2 {
-      font-size: 24px; } }
+      font-size: 26px; } }
+  @media (max-width: 540px) {
+    h2 {
+      font-size: 20px; } }
 
 h3 {
   font-size: 24px; }
+  @media (max-width: 1080px) {
+    h3 {
+      font-size: 20px; } }
+  @media (max-width: 540px) {
+    h3 {
+      font-size: 16px; } }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   margin: 8px 0; }
+  @media (max-width: 1080px) {
+    p {
+      font-size: 14px; } }
+  @media (max-width: 540px) {
+    p {
+      font-size: 12px; } }
 
 .cta {
-  padding: 16px 32px;
+  padding: 16px 18px;
   border-radius: 10px;
   border: none;
-  font-size: 24px;
+  font-size: 18px;
   text-decoration: none; }
   .cta:hover {
     cursor: pointer;
@@ -329,6 +347,9 @@ p {
   -o-background-size: cover;
   background-repeat: no-repeat; }
 
+span {
+  display: inline-block; }
+
 html {
   scroll-behavior: smooth; }
   html body {
@@ -341,16 +362,19 @@ html {
       padding: 16px;
       display: flex;
       flex-direction: column; }
-      @media (max-width: 492px) {
+      @media (max-width: 540px) {
         html body .container {
           padding: 0; } }
       html body .container h2.section-title {
         text-transform: uppercase;
         padding: 32px 0;
         margin: 0; }
-        @media (max-width: 1080px) {
+        @media (max-width: 880px) {
           html body .container h2.section-title {
             text-align: center; } }
+        @media (max-width: 540px) {
+          html body .container h2.section-title {
+            padding: 24px 0; } }
         html body .container h2.section-title span {
           color: #62a901; }
     html body .container-order {
@@ -374,13 +398,16 @@ html {
     flex-direction: row;
     justify-content: space-between;
     align-items: center; }
+    @media (max-width: 800px) {
+      .landing .navbar .component {
+        justify-content: space-evenly; } }
     .landing .navbar .component .logo-row {
       min-width: 280px;
       display: flex;
       flex-direction: row;
       align-items: center;
       box-sizing: border-box; }
-      @media (max-width: 492px) {
+      @media (max-width: 540px) {
         .landing .navbar .component .logo-row {
           margin: 16px 0; } }
       .landing .navbar .component .logo-row .logo-container {
@@ -396,34 +423,30 @@ html {
             transition: transform 0.5s; }
       .landing .navbar .component .logo-row .logo-descriptor {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
-        font-size: 16px;
-        color: #f2f2f2; }
+        align-items: flex-start;
+        color: #f2f2f2;
+        margin-left: 8px; }
         @media (max-width: 656px) {
           .landing .navbar .component .logo-row .logo-descriptor {
             margin-left: 8px; } }
-        @media (max-width: 492px) {
+        @media (max-width: 540px) {
           .landing .navbar .component .logo-row .logo-descriptor {
             width: 232px; } }
-        .landing .navbar .component .logo-row .logo-descriptor span {
+        .landing .navbar .component .logo-row .logo-descriptor h3 {
           text-transform: uppercase;
-          font-size: 24px;
-          font-weight: bold;
           margin: 4px; }
         .landing .navbar .component .logo-row .logo-descriptor p {
-          max-width: 250px;
-          margin: 4px; }
+          margin: 4px auto; }
     .landing .navbar .component .lang-selector {
       margin: 8px 16px; }
       .landing .navbar .component .lang-selector select {
-        font-size: 16px;
         padding: 8px; }
     .landing .navbar .component .cta-navbar {
       display: flex;
       justify-content: flex-end; }
-      @media (max-width: 864px) {
+      @media (max-width: 800px) {
         .landing .navbar .component .cta-navbar {
           display: none; } }
 .landing .hero {
@@ -432,22 +455,27 @@ html {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: 160px 0; }
-    @media (max-width: 1080px) {
+    margin: 160px 8px; }
+    @media (max-width: 880px) {
       .landing .hero .hero-banner {
         flex-direction: column;
-        margin: 64px 0; } }
-    @media (max-width: 492px) {
+        margin: 64px 8px; } }
+    @media (max-width: 540px) {
       .landing .hero .hero-banner {
-        margin: 32px 0; } }
+        margin: 32px 8px; } }
     .landing .hero .hero-banner .hero-content {
       display: flex;
       flex-direction: column;
       color: #f2f2f2;
-      width: 680px;
+      width: 720px;
       align-items: flex-start;
       justify-content: space-around; }
-      @media (max-width: 1080px) {
+      @media (max-width: 880px) {
+        .landing .hero .hero-banner .hero-content {
+          width: 100%;
+          align-items: center;
+          text-align: center; } }
+      @media (max-width: 800px) {
         .landing .hero .hero-banner .hero-content {
           width: 100%;
           align-items: center;
@@ -463,20 +491,17 @@ html {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between; }
-        @media (max-width: 492px) {
+        @media (max-width: 540px) {
           .landing .hero .hero-banner .hero-content .cta-group {
             gap: 16px;
             margin: 32px auto; } }
-        @media (max-width: 492px) {
-          .landing .hero .hero-banner .hero-content .cta-group .cta {
-            font-size: 20px; } }
     .landing .hero .hero-banner .hero-features {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap; }
-      @media (max-width: 1080px) and (min-width: 800px) {
+      @media (max-width: 880px) and (min-width: 800px) {
         .landing .hero .hero-banner .hero-features {
           flex-direction: row;
           justify-content: center;
@@ -488,7 +513,17 @@ html {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        box-sizing: border-box; }
+        box-sizing: border-box;
+        justify-content: flex-start; }
+        @media (max-width: 880px) and (min-width: 800px) {
+          .landing .hero .hero-banner .hero-features .hero-feature:nth-child(2) .hero-feature-text p {
+            width: 150px !important; } }
+        @media (max-width: 880px) and (min-width: 800px) {
+          .landing .hero .hero-banner .hero-features .hero-feature:nth-child(3) .hero-feature-text p {
+            width: 140px !important; } }
+        @media (max-width: 799px) {
+          .landing .hero .hero-banner .hero-features .hero-feature {
+            margin: 12px auto; } }
         .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content {
           display: flex;
           flex-direction: row;
@@ -497,7 +532,7 @@ html {
             width: 64px;
             display: flex;
             align-items: center; }
-            @media (max-width: 1080px) {
+            @media (max-width: 880px) {
               .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content .hero-feature-img {
                 width: 48px; } }
             .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content .hero-feature-img img {
@@ -507,21 +542,16 @@ html {
                 transform: scale(1.1);
                 transition: transform 0.5s; }
           .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content .hero-feature-text {
-            width: 280px;
             color: #f2f2f2;
             margin: 10px 0;
             display: flex;
             align-items: center; }
-            @media (max-width: 1080px) and (min-width: 800px) {
-              .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content .hero-feature-text {
-                width: 200px; } }
             .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content .hero-feature-text p {
-              font-size: 20px;
-              margin: auto 16px; }
-              @media (max-width: 1080px) and (min-width: 800px) {
+              margin: auto 16px;
+              width: 260px; }
+              @media (max-width: 880px) and (min-width: 800px) {
                 .landing .hero .hero-banner .hero-features .hero-feature .hero-feature-content .hero-feature-text p {
-                  font-size: 16px;
-                  margin: auto 8px; } }
+                  width: 240px; } }
 .landing .products {
   display: flex;
   grid-template-columns: repeat(3, 1fr);
@@ -565,7 +595,6 @@ html {
         margin-top: 16px;
         color: black;
         background-color: transparent;
-        font-size: 20px;
         padding: 8px 16px;
         border: 1px solid black;
         border-radius: 10px;
@@ -600,8 +629,7 @@ html {
       margin-bottom: 8px; }
     .landing .advantages-row .advantage p {
       color: #f2f2f2;
-      text-align: start;
-      font-size: 16px; }
+      text-align: start; }
 .landing .company-info {
   margin: 16px; }
   .landing .company-info p {
@@ -616,12 +644,14 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px; }
-    @media (max-width: 1080px) {
+    @media (max-width: 880px) {
       .landing footer .container .footer-grid {
-        grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 16px; } }
+    @media (max-width: 670px) {
       .landing footer .container .footer-grid {
-        grid-template-columns: repeat(1, 1fr); } }
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0; } }
     .landing footer .container .footer-grid .descriptor {
       display: flex;
       flex-direction: column;
@@ -633,7 +663,7 @@ html {
         justify-content: space-between;
         align-items: center;
         box-sizing: border-box; }
-        @media (max-width: 1080px) {
+        @media (max-width: 880px) {
           .landing footer .container .footer-grid .descriptor .logo-row {
             justify-content: space-evenly; } }
         .landing footer .container .footer-grid .descriptor .logo-row .logo-container {
@@ -653,19 +683,14 @@ html {
           flex-direction: row;
           flex-wrap: wrap;
           align-items: center;
-          font-size: 16px;
           color: #f2f2f2;
           width: 240px;
           margin: 0 8px; }
-          .landing footer .container .footer-grid .descriptor .logo-row .logo-descriptor span {
+          .landing footer .container .footer-grid .descriptor .logo-row .logo-descriptor h3 {
             text-transform: uppercase;
-            font-size: 24px;
-            font-weight: bold;
-            margin: 4px;
-            width: 100%; }
-          .landing footer .container .footer-grid .descriptor .logo-row .logo-descriptor p {
-            width: 100%;
             margin: 4px; }
+          .landing footer .container .footer-grid .descriptor .logo-row .logo-descriptor p {
+            margin: 4px auto; }
       .landing footer .container .footer-grid .descriptor button {
         margin: 16px auto; }
     .landing footer .container .footer-grid > div {
@@ -689,13 +714,13 @@ html {
         padding: 0; }
         .landing footer .container .footer-grid .footer-links ul li {
           list-style: none;
-          padding: 8px 0;
-          font-size: 16px; }
+          padding: 8px 0; }
           .landing footer .container .footer-grid .footer-links ul li a {
             color: #f2f2f2; }
     .landing footer .container .footer-grid .newsletter {
       flex: 1;
-      padding: 16px; }
+      padding: 16px;
+      box-sizing: border-box; }
       .landing footer .container .footer-grid .newsletter .newsletter-title {
         display: flex;
         flex-direction: row;
@@ -719,7 +744,6 @@ html {
         border-radius: 10px; }
         .landing footer .container .footer-grid .newsletter .newsletter-box .newsletter-text {
           padding: 16px 24px;
-          font-size: 16px;
           background-color: #f2f2f2;
           border: none;
           border-bottom: 1px solid black;
@@ -731,7 +755,6 @@ html {
           color: black;
           border: none;
           border-radius: 10px;
-          font-size: 24px;
           margin: 8px 0; }
           .landing footer .container .footer-grid .newsletter .newsletter-box .newsletter-btn:hover {
             cursor: pointer;
@@ -743,6 +766,9 @@ html {
       display: flex;
       flex-direction: row;
       justify-content: flex-start; }
+      @media (max-width: 670px) {
+        .landing footer .container .footer-grid .contact-box {
+          margin: 0 20%; } }
   .landing footer .container .copyright {
     text-align: center;
     padding: 8px 0; }

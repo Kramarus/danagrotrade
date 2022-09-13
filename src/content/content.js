@@ -3,8 +3,7 @@ const content = {
     companyName: <>Dan Agro Trade</>,
     descriptor: (
       <>
-        a wholesale supplier 
-        <br />of food products
+        <span>a wholesale supplier</span> <span>of food products</span> 
       </>
     ),
     ctaPrimary: <>Get a quote</>,
@@ -24,14 +23,14 @@ const content = {
         <span>Our</span> company
       </>
     ),
-    heroTitle: <>Export of wheat flour with delivery <br />all over Europe</>,
-    heroSubtitle: <>All sorts and high quality standards <br />directly from a Ukrainian manufacturer</>,
+    heroTitle: <><span>Export of wheat flour</span> <span>with delivery</span> <span>all over Europe</span></>,
+    heroSubtitle: <><span>All sorts and high quality standards</span> <span>directly from a Ukrainian manufacturer</span></>,
   },
   de: {
     companyName: <>Dan Agro Trade</>,
     descriptor: (
       <>
-        Großhandelslieferant <br />für Lebensmittelprodukte
+        <span>Großhandelslieferant</span> <span>für Lebensmittelprodukte</span> 
       </>
     ),
     ctaPrimary: <>Preis anfragen</>,
@@ -51,15 +50,15 @@ const content = {
         <span>Unsere</span> Firma
       </>
     ),
-    heroTitle: <>Export von Weizenmehl mit Lieferung in ganz Europa</>,
-    heroSubtitle: <>Alle Sorten und hohe Qualitätsstandards <br />direkt vom ukrainischen Hersteller</>,
+    heroTitle: <><span>Export von Weizenmehl</span> <span>mit Lieferung</span> <span>in ganz Europa</span>  </>,
+    heroSubtitle: <><span>Alle Sorten und hohe Qualitätsstandards</span> <span>direkt vom ukrainischen Hersteller</span> </>,
  
   },
   it: {
     companyName: <>Dan Agro Trade</>,
     destiptor: (
       <>
-        un fornitore all'ingrosso <br />di prodotti alimentari
+        <span>un fornitore all'ingrosso</span> <span>di prodotti alimentari</span> 
       </>
     ),
     ctaPrimary: <>Fai un ordine</>,
@@ -69,7 +68,7 @@ const content = {
     companyName: <>Dan Agro Trade</>,
     destiptor: (
       <>
-        dostawca hurtowy <br />produktów spożywczych
+        <span>dostawca hurtowy</span> <span>produktów spożywczych</span> 
       </>
     ),
     ctaPrimary: <>Do zamówienia</>,
@@ -79,7 +78,7 @@ const content = {
     companyName: <>Дан Агро Трейд</>,
     descriptor: (
       <>
-        оптовий постачальник <br />харчових продуктів
+        <span>оптовий постачальник</span> <span>харчових продуктів</span> 
       </>
     ),
     ctaPrimary: <>Запросити ціну</>,
@@ -99,15 +98,15 @@ const content = {
         <span>Наша</span> компанія
       </>
     ),
-    heroTitle: <>Експорт пшеничного борошна з доставкою в Європі</>,
-    heroSubtitle: <>Усі види та високі стандарти якості безпосередньо від українського виробника</>,
+    heroTitle: <><span>Експорт</span><span>пшеничного борошна</span> <span>з доставкою в Європі</span> </>,
+    heroSubtitle: <><span>Усі види та високі стандарти якості</span> <span>безпосередньо від українського виробника</span> </>,
  
   },
   ru: {
     companyName: <>Дан Агро Трейд</>,
     descriptor: (
       <>
-        оптовый поставщик <br />пищевых продуктов
+        <span>оптовый поставщик</span> <span>пищевых продуктов</span> 
       </>
     ),
     ctaPrimary: <>Узнать цену</>,
@@ -127,8 +126,8 @@ const content = {
         <span>Наша</span> компания
       </>
     ),
-    heroTitle: <>Экспорт пшеничной муки с доставкой по Европе</>,
-    heroSubtitle: <>Все виды и высокие стандарты качества напрямую от украинского производителя</>,
+    heroTitle: <><span>Экспорт</span> <span>пшеничной муки</span> <span>с доставкой по Европе</span> </>,
+    heroSubtitle: <><span>Все виды и высокие стандарты качества</span> <span>напрямую от украинского производителя</span> </>,
   },
 };
 

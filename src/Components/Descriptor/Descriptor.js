@@ -11,7 +11,7 @@ export default function Descriptor(props) {
           <img src={danAgroLogo} alt="Dan Agro Logo" />
         </div>
         <div className="logo-descriptor">
-          <span>{content[props.lang].companyName}</span>
+          <h3>{content[props.lang].companyName}</h3>
           <p>{content[props.lang].descriptor}</p>
         </div>
       </div>
