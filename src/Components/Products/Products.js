@@ -470,7 +470,7 @@ export default function Products(props) {
               setState({ productDisplay: true, productData: e });
             }}
           >
-            {e.productInfo[props.lang].label}
+            <h4>{e.productInfo[props.lang].label}</h4>
           </button>
         </div>
       </a>

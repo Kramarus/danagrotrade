@@ -10,7 +10,7 @@ export default function ProductInfo(props) {
 
   return (
     <div
-      className="modalOverlay component"
+      className="modalOverlay component background-image"
       id="modalOverlay"
       onClick={props.closeProduct}
     >

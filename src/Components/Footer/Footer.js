@@ -17,7 +17,7 @@ function Footer(props) {
           <div className="descriptor">
             <Descriptor lang={props.lang} />
             <button className="cta cta-primary" onClick={props.openForm}>
-              {content[props.lang].ctaPrimary}
+              <h4>{content[props.lang].ctaPrimary}</h4>
             </button>
           </div>
           <div className="footer-links">
@@ -84,7 +84,7 @@ function Footer(props) {
             </div>
           </div>
         </div>
-        <div className="copyright">{contentFooter[props.lang].copyright}</div>
+        <div className="copyright"><p>{contentFooter[props.lang].copyright}</p></div>
     </footer>
   );
 }

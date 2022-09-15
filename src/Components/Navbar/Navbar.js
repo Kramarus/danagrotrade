@@ -32,7 +32,7 @@ function Navbar(props) {
       <>
         <div className="cta-navbar">
           <button className="cta cta-primary" onClick={props.openForm}>
-            {content[props.lang].ctaPrimary}
+            <h4>{content[props.lang].ctaPrimary}</h4>
           </button>
         </div>
       </>

@@ -40,7 +40,7 @@ const contentOrder = {
       semolina: "Grieß",
       oil: "Sonnenblumenöl",
     },
-    volume: "Volumen (Tonnen)",
+    volume: "Menge (Tonnen)",
     customLabel: {
       question: "Brauchen Sie Eigenmarkenetikett?",
       no: "Wir btauchen keine Eigenmarke",
@@ -48,7 +48,7 @@ const contentOrder = {
     },
     no: "Nein",
     yes: "Ja",
-    comment: "Kommentar (Ihre Anforderungen an Qualität, Verpackung etc.)",
+    comment: <><span>Kommentar</span> <span>(Ihre Anforderungen an Qualität, Verpackung usw.)</span></> ,
     submitBtn: "Schicken",
     backBtn: "Zurück",
     required: "* Pflichtfelder",

@@ -3,6 +3,9 @@
 .modalOverlay {
   display: flex;
   position: fixed;
+  height: 100vh;
+  padding: 16px;
+  overflow-y: hidden!important;
   top: 0;
   left: 0;
   bottom: 0;
@@ -28,6 +31,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      padding: 8px;
       .x-btn {
         width: 24px;
         height: 24px;
@@ -44,7 +48,6 @@
       }
       a {
         cursor: pointer;
-        font-size: 48px;
         padding: 8px;
         color: $light-color;
         transform: rotate(45deg);
@@ -67,11 +70,14 @@
         justify-content: space-between;
         width: 100%;
         .form-product {
-          margin-right: 16px;
-          width: 180px;
+          width: 160px;
         }
         .form-volume {
           width: 120px;
+          input {
+            border: 1px solid $light-color;
+          }
+          
         }
       }
       .form-query {
@@ -80,24 +86,20 @@
         flex-direction: column;
         .text-input,
         select {
-          font-size: 16px;
-          border: 1px dotted $light-color;
+          box-sizing: border-box;
+          border: 0px dotted $light-color;
           border-radius: 8px;
           padding: 8px;
         }
       }
       .form-label {
-        font-size: 16px;
-        padding: 8px 0;
+        padding: 0;
       }
       .form-buttons-row {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         margin: 16px 0;
-        button {
-          font-size: 16px!important;
-        }
 
         .cta-form-submit {
           @extend %cta-form;

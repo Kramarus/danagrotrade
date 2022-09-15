@@ -11,10 +11,10 @@ export default function HeroContent(props) {
       <h2>{content[props.lang].heroSubtitle}</h2>
       <div className="cta-group">
         <button className="cta cta-primary" onClick={props.openForm}>
-          {content[props.lang].ctaPrimary}
+          <h4>{content[props.lang].ctaPrimary}</h4>
         </button>
         <Link className="cta cta-secondary" to="#our-production">
-          {content[props.lang].ctaSecondary}
+          <h4>{content[props.lang].ctaSecondary}</h4>
         </Link>
       </div>
     </div>

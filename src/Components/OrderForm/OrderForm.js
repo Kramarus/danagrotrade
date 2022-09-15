@@ -36,11 +36,11 @@ export default function OrderForm(props) {
   };
 
   return (
-    <div className="modalOverlay component" id="modalOverlay">
+    <div className="modalOverlay background-image component" id="modalOverlay">
       <div className="container modalOrderForm" id="modalOrderForm">
         <div className="modal-header">
           <div className="">
-            <h2>{contentOrder[props.lang].title}</h2>
+            <h3>{contentOrder[props.lang].title}</h3>
           </div>
           <div className="x-btn" onClick={props.xCloseForm}>
             <svg>
@@ -75,7 +75,7 @@ export default function OrderForm(props) {
           {/* Name */}
           <div className="form-query">
             <label for="name" className="form-label">
-              {contentOrder[props.lang].name}
+              <p>{contentOrder[props.lang].name}</p>
             </label>
             <input
               type="text"
@@ -88,7 +88,7 @@ export default function OrderForm(props) {
           {/* Contact */}
           <div className="form-query">
             <label for="location" className="form-label">
-              {contentOrder[props.lang].location}
+            <p>{contentOrder[props.lang].location}</p>
             </label>
             <input
               type="text"
@@ -100,7 +100,7 @@ export default function OrderForm(props) {
           </div>
           <div className="form-query">
             <label for="email" className="form-label">
-              {contentOrder[props.lang].email}
+            <p>{contentOrder[props.lang].email}</p>
             </label>
             <input
               type="text"
@@ -125,7 +125,7 @@ export default function OrderForm(props) {
           <div className="form-row">
             <div className="form-query form-product">
               <label for="product" class="form-label">
-                {contentOrder[props.lang].product.label}
+              <p>{contentOrder[props.lang].product.label}</p>
               </label>
 
               <select className="form-select" id="product" name="product">
@@ -146,7 +146,7 @@ export default function OrderForm(props) {
             </div>
             <div className="form-query form-volume">
               <label for="volume" className="form-label">
-                {contentOrder[props.lang].volume}
+              <p>{contentOrder[props.lang].volume}</p>
               </label>
               <input
                 type="text"
@@ -160,7 +160,7 @@ export default function OrderForm(props) {
           {/* Commentary */}
           <div className="form-query">
             <label for="comments" className="form-label">
-              {contentOrder[props.lang].comment}
+            <p>{contentOrder[props.lang].comment}</p>
             </label>
             <textarea
               className="text-input"
@@ -169,7 +169,7 @@ export default function OrderForm(props) {
               rows="3"
             ></textarea>
           </div>
-          {contentOrder[props.lang].required}
+          <p>{contentOrder[props.lang].required}</p>
           {/* Hidden queries */}
           {/* <>
             <input type="hidden" name="_captcha" value="false" />
@@ -180,10 +180,10 @@ export default function OrderForm(props) {
           {/* Buttons */}
           <div className="form-buttons-row">
             <button type="submit" className="cta-form-submit" onClick={validateForm}>
-              {contentOrder[props.lang].submitBtn}
+              <h4>{contentOrder[props.lang].submitBtn}</h4>
             </button>
             <button className="cta-form-close" onClick={props.xCloseForm}>
-              {contentOrder[props.lang].backBtn}
+              <h4>{contentOrder[props.lang].backBtn}</h4>
             </button>
           </div>
         </form>

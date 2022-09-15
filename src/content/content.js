@@ -98,7 +98,7 @@ const content = {
         <span>Наша</span> компанія
       </>
     ),
-    heroTitle: <><span>Експорт</span><span>пшеничного борошна</span> <span>з доставкою в Європі</span> </>,
+    heroTitle: <><span>Експорт</span> <span>пшеничного борошна</span> <span>з доставкою в Європі</span> </>,
     heroSubtitle: <><span>Усі види та високі стандарти якості</span> <span>безпосередньо від українського виробника</span> </>,
  
   },

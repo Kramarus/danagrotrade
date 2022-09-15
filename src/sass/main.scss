@@ -136,9 +136,10 @@ html {
         }
       }
       .lang-selector {
-        margin: 8px 16px;
+        margin: 8px;
         select {
-          padding: 8px;
+          padding: 16px;
+          border-radius: 8px;
         }
       }
       .cta-navbar {
@@ -303,7 +304,7 @@ html {
         height: 200px;
         margin: auto;
         height: calc(300px * 2 / 3);
-        border-radius: 15px;
+        border-radius: 16px;
         cursor: pointer;
         &:hover {
           overflow: hidden;
@@ -311,7 +312,7 @@ html {
         img {
           height: 100%;
           width: 100%;
-          border-radius: 15px;
+          border-radius: 16px;
           &:hover {
             -webkit-transform: scale(1.1);
             -moz-transform: scale(1.1);
@@ -333,7 +334,7 @@ html {
           background-color: transparent;
           padding: 8px 16px;
           border: 1px solid $dark-color;
-          border-radius: 10px;
+          border-radius: 8px;
           text-decoration: none;
           &:hover {
             color: $light-color;
@@ -503,7 +504,7 @@ html {
               color: $light-color;
               border: 2px solid $light-color;
               border-bottom: 0;
-              border-radius: 10px 10px 0 0;
+              border-radius: 8px 8px 0 0;
             }
           }
           .newsletter-box {
@@ -514,13 +515,13 @@ html {
             background-color: transparent;
             border: 2px solid $light-color;
             padding: 8px;
-            border-radius: 10px;
+            border-radius: 8px;
             .newsletter-text {
               padding: 16px 24px;
               background-color: $light-color;
               border: none;
               border-bottom: 1px solid $dark-color;
-              border-radius: 10px;
+              border-radius: 8px;
               margin: 8px 0;
             }
             .newsletter-btn {
@@ -528,7 +529,7 @@ html {
               background-color: $light-color;
               color: $dark-color;
               border: none;
-              border-radius: 10px;
+              border-radius: 8px;
               margin: 8px 0;
               &:hover {
                 cursor: pointer;
