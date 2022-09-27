@@ -3,14 +3,14 @@
 .modalOverlay {
   display: flex;
   position: fixed;
-  height: 100vh;
-  overflow-y: hidden!important;
+  overflow: scroll;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background: fade-out($dark-color, 0.3);
   z-index: 1000;
+  padding: 16px;
   .modalProductInfo {
     box-sizing: border-box;
     max-width: 1200px;
@@ -22,6 +22,8 @@
     flex-direction: column;
     padding: 16px!important;
     color: $dark-color;
+    overflow-y: auto;
+    margin-bottom: 128px;
     .modal-header {
       border-bottom: 1px solid $secondary-color;
       display: flex;

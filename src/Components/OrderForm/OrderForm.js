@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 
 import contentOrder from "../../content/contentOrder";
 
@@ -13,6 +14,8 @@ export default function OrderForm(props) {
   };
 
   const form = useRef();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -31,9 +34,12 @@ export default function OrderForm(props) {
           console.log(error.text);
         }
       );
-    props.xCloseForm();
-    props.openThank();
+    navigate(location.pathname + "/thankyou")
   };
+
+  const goBack = () => {
+    navigate(-1)
+  }
 
   return (
     <div className="modalOverlay background-image component" id="modalOverlay">
@@ -42,7 +48,7 @@ export default function OrderForm(props) {
           <div className="">
             <h3>{contentOrder[props.lang].title}</h3>
           </div>
-          <div className="x-btn" onClick={props.xCloseForm}>
+          <div className="x-btn" onClick={() => {goBack()}}>
             <svg>
               <line
                 x1="1"
@@ -182,7 +188,7 @@ export default function OrderForm(props) {
             <button type="submit" className="cta-form-submit" onClick={validateForm}>
               <h4>{contentOrder[props.lang].submitBtn}</h4>
             </button>
-            <button className="cta-form-close" onClick={props.xCloseForm}>
+            <button className="cta-form-close" onClick={() => {navigate("..")}}>
               <h4>{contentOrder[props.lang].backBtn}</h4>
             </button>
           </div>

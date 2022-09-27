@@ -102,7 +102,7 @@ const contentFooter = {
         title: <>Посилання</>,
         home: <>Головна</>,
         products: <>Продукти</>,
-        advantages: <>Преимущества</>,
+        advantages: <>Переваги</>,
         about: <>Про нас</>,
       },
       newsletter: {

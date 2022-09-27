@@ -66,7 +66,7 @@ function Footer(props) {
               <h3>{contentFooter[props.lang].contacts.salesEurope.title}</h3>
               <p>{contentFooter[props.lang].contacts.salesEurope.agent}</p>
               <p>{contentFooter[props.lang].contacts.salesEurope.phone}</p>
-              <p>{contentFooter[props.lang].contacts.salesEurope.email}</p>
+              <p>{contentFooter[props.lang].contacts.salesEurope.email}</p> 
             </div>
           </div>
           <div className="contact-box">

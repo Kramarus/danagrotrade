@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, Route } from "react-router-dom";
+import { useNavigate, Route, useLocation } from "react-router-dom";
 
 import Navbar from "../Navbar/Navbar";
 import Hero from "../Hero/Hero";
@@ -14,6 +14,7 @@ import content from "../../content/content";
 
 export default function Landing(props) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const changeLang = (e) => {
     const lang = e.target.value;
@@ -23,7 +24,7 @@ export default function Landing(props) {
   var [formDisplay, setFormDisplay] = useState(false);
 
   const openForm = () => {
-    setFormDisplay((formDisplay = true));
+    navigate(location.pathname+"/orderform")
   };
 
   const closeForm = (e) => {
@@ -31,12 +32,12 @@ export default function Landing(props) {
       e.target === document.getElementById("modalOverlay") &&
       e.target !== document.getElementById("modalOrderForm")
     ) {
-      setFormDisplay((formDisplay = false));
+      navigate(-1);
     }
   };
 
   const xCloseForm = () => {
-    setFormDisplay((formDisplay = false));
+    navigate(-1)
   };
 
   var [thank, setThank] = useState(false);

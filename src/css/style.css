@@ -83,9 +83,7 @@ label.form-label {
 .modalOverlay {
   display: flex;
   position: fixed;
-  height: 100vh;
   padding: 16px;
-  overflow-y: hidden !important;
   top: 0;
   left: 0;
   bottom: 0;
@@ -187,14 +185,14 @@ label.form-label {
 .modalOverlay {
   display: flex;
   position: fixed;
-  height: 100vh;
-  overflow-y: hidden;
+  overflow: scroll;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 1000; }
+  z-index: 1000;
+  padding: 16px; }
   .modalOverlay .modalProductInfo {
     box-sizing: border-box;
     max-width: 1200px;
@@ -205,7 +203,9 @@ label.form-label {
     display: flex;
     flex-direction: column;
     padding: 16px !important;
-    color: black; }
+    color: black;
+    overflow-y: auto;
+    margin-bottom: 128px; }
     .modalOverlay .modalProductInfo .modal-header {
       border-bottom: 1px solid #62a901;
       display: flex;

@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import contentThank from "../../content/contentThank";
 
 export default function Thankyou(props) {
+
+  const navigate = useNavigate();
   return (
     <div className="background-image component">
       <div
@@ -18,7 +21,7 @@ export default function Thankyou(props) {
           <div className="modal-body">
             <p>{contentThank[props.lang].text}</p>
             <center>
-              <button className="cta" onClick={props.close}>
+              <button className="cta" onClick={() => {navigate("..")}}>
                 <center>{contentThank[props.lang].backButton}</center>
               </button>
             </center>

@@ -56,7 +56,7 @@ export default function ProductInfo(props) {
           <div className="modal-table"><div>{props.productData.table}</div></div>
         </div>
         <div className="modal-footer">
-          <a className="cta cta-primary" onClick={handleClick}>{content[props.lang].ctaPrimary}</a>
+          <a className="cta cta-primary" onClick={handleClick}><h4>{content[props.lang].ctaPrimary}</h4></a>
         </div>
       </div>
     </div>
